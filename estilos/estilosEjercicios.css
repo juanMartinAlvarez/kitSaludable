@@ -1,0 +1,23 @@
+body{
+    background: url(img/ejercicios.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;}
+header{
+    background:#2c3e50;
+    text-align: center;}
+h1{
+    color:#fff;
+    font-size: 15px;
+    margin: 0px;
+    }
+
+footer{
+    background:#2c3e50;
+    border-bottom: 9px solid #2C2C2C;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0px;
+    float: center;
+    width: 100%;}

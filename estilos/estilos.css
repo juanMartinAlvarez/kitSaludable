@@ -1,0 +1,104 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font: x-small 3em Verdana,sans-serief;
+    font-size: 20px;
+    color: #333;}
+a{
+    color: #017694;}
+a:hover{
+    color: #48B6FF;}
+#contenedor{
+    background: #fff;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;}
+
+#grupo_boton{
+    padding-bottom: 60px;
+}
+
+header{
+    background:#2c3e50;
+    text-align: center;}
+h1, h2{
+    margin: 0px;}
+h1{
+    color:#fff;
+    font-size: 40px;
+    margin: 0px;
+    padding: 10px 0;
+    text-align: center;}
+
+nav{
+    background: #017694;
+    text-align: center;}
+ul{
+    margin: 0px;
+    list-style: none;
+    display: inline-table;
+    padding: 16px 0px 14px}
+ul li{
+    float: left;
+    padding: 0px 12px;
+    border-right: 2px solid #fff;}
+ul li:last-child{
+    border-right: none;}
+ul li a{
+    color: #fff;
+    text-decoration: none;}
+
+#contenido{
+    background: #EAE8E8;
+    margin: 20px auto;
+    max-width: 1066px;
+    padding: 20px;
+    display: flex;}
+#alimentos, #ejercicios{
+    width: 50%}
+
+article{
+    color: blue;
+    background: #fff;
+    float: left;
+    padding: 0%;
+    margin: 0px 2% 20px 0px;
+    width: 88%;
+    text-align: center;}
+
+article h2 a{
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;}
+
+article img{
+    height: auto;
+    width: 92%;
+    border-radius: 50px;
+    -webkit-transition:-webkit-transform 0.3s ease-in-out 0.1s;}
+
+article img:hover{
+    -webkit-transform:scale(1.2);
+    box-shadow: rgb(0, 0, 190) 5px 5px 30px;
+}
+
+#banner{
+    width: 20%}
+#banner img{
+    width: 80%;}
+
+#banner1{
+    width: 20%}
+#banner1 img{
+    width: 80%;}
+
+footer{
+    background:#2c3e50;
+    border-bottom: 9px solid #2C2C2C;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0px;
+    float: center;
+    width: 100%;}
