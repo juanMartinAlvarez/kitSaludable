@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos/estilos.css">
+        <link href="css/bootstrap.css" media="all" rel="stylesheet">
+        
+        <title>Registrar nuevo usuario</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1 onclick="location.href='index.html'">KitSaludable</h1>
+        </header>   
+        
+        <div class="modal-dialog text-center">
+            <div class="col-sm-8 main-section">
+                <div class="modal-content">
+                    <div class="col-sm-12 user-img">
+                        <img src="img/silueta-hombre.jpg"/>
+                    </div>
+                    <form class="col-sm-12">
+                        <div class="form-group" id="user-group">
+                            <label class="container">Ingrese nombre de usuario</label> 
+                            <input type="text" class="form-control" placeholder="Nombre de usuario"/>
+                        </div>
+                         <div class="form-group" id="user-group">
+                            <label class="container">Ingrese correo electrónico</label> 
+                            <input type="text" class="form-control" placeholder="Nombre de usuario"/>
+                        </div>
+                        <div class="form-goup" id="contraseña-group">
+                            <label class="container">Ingrese contraseña</label> 
+                            <input type="password" class="form-control" placeholder="Contraseña"/>
+                        </div>
+                        <div class="form-goup" id="contraseña-group">
+                             <label class="container">Repita contraseña</label> 
+                            <input type="password" class="form-control" placeholder="Repite la contraseña"/>
+                        </div>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="" id=""> Estas de acuerdo con los terminos y condiciones.
+                        </label>
+                        <button type="submit" class="btn btn-primary" id="boton"><i class="fas fa-sign-in-alt"></i>Crear cuenta</button>
+                        <div class="col-sm-12">
+                            <a href="ingresa.html">Ingresar</a>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+        <style>
+            body{
+                background: url(img/gymBackground.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            .main-section{
+                margin: 0 auto;
+                margin-top: 25%;
+                padding: 0;
+            }
+            .user-img{
+                margin-top: -50px;
+                margin-bottom: 35px;
+            }
+            .user-img img{
+                width: 100px;
+                height: 100px;
+            }
+            .boton{
+                margin-top: -5px;
+                margin-bottom: 5px;
+            }
+            label{
+               font: 1em Verdana,sans-serief;
+               color: #2c3e50;
+            }
+        </style>
+    <!--Bootstrap CSS -->
+        <script src="js/jquery/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery/jquery-3.4.1.slim.min.js"></script>
+        <script src="js/popper/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+  </body>
+ 
+</html>
