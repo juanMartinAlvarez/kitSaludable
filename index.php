@@ -59,8 +59,8 @@ require_once('includes/olvido.php');
 							<!-- <p>numero de contacto</p>
 							<input type="text" value="" name="contact"  required>-->
 							<div class="sign-up">
-							<input type="reset" value="Reset">
-							<input type="submit" name="signup"  value="Sign Up" >
+							<input type="reset" value="Restablecer los campos">
+							<input type="submit" name="signup"  value="Registrarse" >
 							<div class="clear"> </div>
 							</div>
 						</form>
