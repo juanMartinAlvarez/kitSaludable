@@ -54,7 +54,7 @@ require_once('includes/olvido.php');
 							<input type="text" class="text" value="" name="lname"  required >
 							<p>Direccion de correo </p>
 							<input type="text" class="text" value="" name="email"  >
-							<p>Contraseña </p>
+							<p>Contrase&ntilde;a </p>
 							<input type="password" value="" name="password" required>
 							<!-- <p>numero de contacto</p>
 							<input type="text" value="" name="contact"  required>-->
