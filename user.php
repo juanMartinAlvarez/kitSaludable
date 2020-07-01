@@ -2,12 +2,16 @@
 
   class User{
 
+    
+
     private $id;
     private $fname;
+    /*
     private $lname;
     private $email;
     private $password;
     private $contactno;
+    */
 
     public function getid(){
       return $this->id;
@@ -24,6 +28,7 @@
     public function setfname($fname){
       $this->fname = $fname;
     }
+    /*
     public function getlname(){
       return $this->lname;
     }
@@ -52,7 +57,7 @@
     public function setcontactno($contactno){
       $this->contactno = $contactno;
     }
-
+*/
 
   }
 

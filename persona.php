@@ -1,6 +1,6 @@
 <?php
 
-  class persona{
+  class Persona{
 
     private $id;
     private $peso;

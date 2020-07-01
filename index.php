@@ -38,7 +38,7 @@ require_once('includes/olvido.php');
 
 			</li>
 			  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><div class="top-img"><img src="images/top-lock.png" alt=""/></div><span>Ingresar</span></li>
-			  <li class="resp-tab-item lost" aria-controls="tab_item-2" role="tab"><div class="top-img"><img src="images/top-key.png" alt=""/></div><span>Reset Password</span></li>
+			  <li class="resp-tab-item lost" aria-controls="tab_item-2" role="tab"><div class="top-img"><img src="images/top-key.png" alt=""/></div><span>Restablecer contraseña</span></li>
 			  <div class="clear"></div>
 		  </ul>		
 
@@ -50,7 +50,7 @@ require_once('includes/olvido.php');
 						<form name="registration" method="post" action="" enctype="multipart/form-data">
 							<p>Nombre/s </p>
 							<input type="text" class="text" value=""  name="fname" required >
-							<p>Apelldo/s </p>
+							<p>Apellido/s </p>
 							<input type="text" class="text" value="" name="lname"  required >
 							<p>Direccion de correo </p>
 							<input type="text" class="text" value="" name="email"  >
@@ -76,14 +76,14 @@ require_once('includes/olvido.php');
 
 						</div>
 						<form name="login" action="" method="post">
-							<input type="text" class="text" name="uemail" value="" placeholder="Enter your registered email"  ><a href="#" class=" icon email"></a>
+							<input type="text" class="text" name="uemail" value="" placeholder="Ingresa tu correo"  ><a href="#" class=" icon email"></a>
 
-							<input type="password" value="" name="password" placeholder="Enter valid password"><a href="#" class=" icon lock"></a>
+							<input type="password" value="" name="password" placeholder="Ingresa una contraseña"><a href="#" class=" icon lock"></a>
 
 							<div class="p-container">
 
 								<div class="submit two">
-								<input type="submit" name="login" value="LOG IN" >
+								<input type="submit" name="login" value="Ingresar" >
 								</div>
 								<div class="clear"> </div>
 							</div>
@@ -100,10 +100,10 @@ require_once('includes/olvido.php');
 
 						</div>
 						<form name="login" action="" method="post">
-							<input type="text" class="text" name="femail" value="" placeholder="Enter your registered email" required  ><a href="#" class=" icon email"></a>
+							<input type="text" class="text" name="femail" value="" placeholder="Ingresa tu correo" required  ><a href="#" class=" icon email"></a>
 
 									<div class="submit three">
-										<input type="submit" name="send" onClick="myFunction()" value="Send Email" >
+										<input type="submit" name="send" onClick="myFunction()" value="Enviar correo" >
 									</div>
 								</form>
 								</div>

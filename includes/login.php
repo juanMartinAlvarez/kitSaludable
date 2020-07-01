@@ -1,5 +1,6 @@
 <?php
 // Code for login 
+include('mapuser.php');
 if(isset($_POST['login'])){
 	$password=$_POST['password'];
 	$dec_password=$password;
@@ -16,8 +17,10 @@ if(isset($_POST['login'])){
 		$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 		header("location:http://$host$uri/$extra");
 		exit();
+
+
 	}else{
-		echo "<script>alert('Invalid username or password');</script>";
+		echo "<script>alert('Nombre de usuario o contrasenia invalidos');</script>";
 		$extra="index.php";
 		$host  = $_SERVER['HTTP_HOST'];
 		$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
