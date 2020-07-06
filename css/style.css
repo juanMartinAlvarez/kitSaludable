@@ -35,14 +35,15 @@ body{
   -moz-background-size:cover;
   -webkit-background-size:cover;
   font-family: 'Source Sans Pro', sans-serif;
-
 }
 .main h1{
-  font-size:3em;
-  color: #0C7000;
-  padding: 1.5em 0;
   text-align: center;
-  font-family: 'Lora', serif;
+  color: #FFF;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3em;
+  text-shadow: /*relieve*/
+  0 1px 0 rgb(200, 200, 200), 0 2px 0 rgb(190, 190, 190), 0 3px 0 rgb(180, 180, 180), 0 4px 0 rgb(175, 175, 175), 0 5px 0 rgb(180, 180, 180), 0 6px 0 rgb(190, 190, 190), /*sombra*/
+  5px 7px 5px rgba(0, 0, 0, .40), 5px 12px 10px rgba(0, 0, 0, .30), 5px 17px 20px rgba(0, 0, 0, .20), 5px 22px 30px rgba(0, 0, 0, .10);
 }
 body a,form li,.submit input[type="submit"],form li.second,ul.age-groups li label,.submit.three input[type="submit"],.submit.two input[type="submit"]{
 	transition: 0.1s all;
@@ -132,7 +133,7 @@ h2.resp-accordion {
   margin: 0px;
   padding: 10px 15px;
   background:#C5CDD1;
-  margin:10px 0;
+  /*margin:10px 0;*/
   color:#FFF;
 }
 span.tab-img img {
@@ -242,11 +243,12 @@ li.resp-tab-item.lost{
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
 }
+
 .sign-up input[type="reset"]:hover,.sign-up input[type="submit"]:hover, .submit.two input[type="submit"]:hover,.submit.three input[type="submit"]:hover{
   -webkit-transform: rotate(4deg);
   transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
+  /*-o-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);*/
 }
 
 .sign-up input[type="submit"] {
@@ -420,7 +422,7 @@ li.resp-tab-item.lost{
   background: #BA3627;
   font-family: 'Raleway', sans-serif;
 }
-/*----------*/
+/*----------
 .p-container{
   margin: 1em 0;
 }
@@ -488,6 +490,7 @@ label.checkbox {
 float: left;
 margin-top: 3px;
 }
+
 .p-container  .checkbox i {
   position: absolute;
   top: 0px;
@@ -513,7 +516,7 @@ margin-top: 3px;
   color: #2da5da;
 }
 .p-container .checkbox input:checked + i,
-.p-container . input:checked + i {
+.p-container .input:checked + i {
   border-color: #2da5da;  
 }
 .p-container .rating input:checked ~ label {
@@ -522,7 +525,7 @@ margin-top: 3px;
 
 .p-container .checkbox input:checked + i:after {
   opacity: 1;
-}
+}*/
 /*---------*/
 form.sub {
   padding: 1em 0;
@@ -809,4 +812,5 @@ form.sub input[type="password"] {
 .main h1 {
   font-size: 1.45em;
   }
+}
 }
