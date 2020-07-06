@@ -1,6 +1,5 @@
 <?php
 // Code for login 
-include('mapuser.php');
 if(isset($_POST['login'])){
 	$password=$_POST['password'];
 	$dec_password=$password;
