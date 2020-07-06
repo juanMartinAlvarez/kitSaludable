@@ -15,7 +15,7 @@ if(isset($_POST['signup'])){
 		$msg=mysqli_query($con,"insert into users(fname,lname,email,password) values('$fname','$lname','$email','$enc_password')");
 
 		if($msg){
-				echo "<script>alert('Register successfully');</script>";
+			echo "<script>alert('Register successfully');</script>";
 		}
 	}
 }
