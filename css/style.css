@@ -30,6 +30,7 @@ img{max-width:100%;}
 /****-----start-body----****/
 body{
 	background:url("../images/bg1.jpg") no-repeat 0px 0px;
+  background-attachment: fixed;
   background-size:cover;
   -o-background-size:cover;
   -moz-background-size:cover;
@@ -37,10 +38,11 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
 }
 .main h1{
+  font-size: 5em;
+  padding: 5px;
   text-align: center;
   color: #FFF;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 3em;
   text-shadow: /*relieve*/
   0 1px 0 rgb(200, 200, 200), 0 2px 0 rgb(190, 190, 190), 0 3px 0 rgb(180, 180, 180), 0 4px 0 rgb(175, 175, 175), 0 5px 0 rgb(180, 180, 180), 0 6px 0 rgb(190, 190, 190), /*sombra*/
   5px 7px 5px rgba(0, 0, 0, .40), 5px 12px 10px rgba(0, 0, 0, .30), 5px 17px 20px rgba(0, 0, 0, .20), 5px 22px 30px rgba(0, 0, 0, .10);
@@ -86,7 +88,7 @@ i.resp-tab-item.lost {
    background:#ba3627; 
   text-transform: uppercase;
   cursor: pointer;
-  padding:1.3em 0;
+  padding:0.5em 0;
   display: inline-block;
   text-align: center;
   list-style: none;
@@ -202,7 +204,7 @@ li.resp-tab-item.lost{
   margin:0;
 }
 .top-img {
-  padding-bottom: 0.7em;
+  padding-bottom: 0em;
 }
 /*---------*/
 .register p {
@@ -588,7 +590,7 @@ form.sub input[type="password"] {
   .sap_tabs {
   margin: 0 auto;
   width:40%;
-}
+  }
   .fb a.hvr-bounce-to-bottom {
   background: url("../images/fb.png")no-repeat 31px 15px #3b5fa4;
   padding: 1em 5.5em;
@@ -597,9 +599,9 @@ form.sub input[type="password"] {
   background: url("../images/twt.png")no-repeat 40px 15px #11aade;
   padding: 1em 5.5em;
   }
-  .main h1{
-  font-size:2.8em;
-  }
+  /*.main h1{
+  font-size:5em;
+  }*/
 }
 @media (max-width:1366px){
   .sap_tabs {
@@ -629,7 +631,7 @@ form.sub input[type="password"] {
 }
 @media (max-width:1024px){
   body {
-  background: url("../images/bg1.jpg") no-repeat 0px 0px;
+  /*background: url("../images/bg1.jpg") no-repeat 0px 0px;*/
   padding-bottom: 4em;
 }
  .sap_tabs {
@@ -679,7 +681,7 @@ form.sub input[type="password"] {
 }
 @media (max-width:480px){
   body {
-  background: url("../images/bg.jpg") no-repeat 0px 0px;
+  /*background: url("../images/bg.jpg") no-repeat 0px 0px;*/
   padding-bottom: 4em;
 }
   .top-img img {

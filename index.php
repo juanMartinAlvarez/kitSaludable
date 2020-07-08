@@ -37,9 +37,12 @@ require_once('includes/olvido.php');
   <h1>Kit Saludable</h1>
   <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
     <ul class="resp-tabs-list">
-      <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><div class="top-img"><img src="images/top-note.png" alt=""/></div><span>Registrarse</span></li>
-      <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><div class="top-img"><img src="images/top-lock.png" alt=""/></div><span>Ingresar</span></li>
-      <li class="resp-tab-item lost" aria-controls="tab_item-2" role="tab"><div class="top-img"><img src="images/top-key.png" alt=""/></div><span>Restablecer contraseña</span></li>
+      <li class="resp-tab-item" aria-controls="tab_item-0" role="tab">
+        <div class="top-img"><img src="images/top-note.png" alt="" data-toggle="tooltip" data-placement="bottom" title="REGISTRARSE"/></div></li>
+      <li class="resp-tab-item" aria-controls="tab_item-1" role="tab">
+        <div class="top-img"><img src="images/top-lock.png" alt="" data-toggle="tooltip" data-placement="bottom" title="INGRESAR"/></div></li>
+      <li class="resp-tab-item lost" aria-controls="tab_item-2" role="tab">
+        <div class="top-img"><img src="images/top-key.png" alt="" data-toggle="tooltip" data-placement="bottom" title="RESTABLECER CONTRASEÑA"/></div></li>
       <div class="clear"></div>
     </ul>		
 
@@ -89,13 +92,13 @@ require_once('includes/olvido.php');
               <form name="login" action="" method="post">
                 <input type="text" class="text" name="femail" value="" placeholder="Ingresa tu correo" required  ><a href="#" class=" icon email"></a>
                 <div class="submit three">
-                  <input type="submit" name="send" onClick="myFunction()" value="Enviar correo" >
+                  <input type="submit" name="send" onClick="myFunction()" value="Enviar correo">
                 </div>
               </form>
             </div>
-          </div>             	      
-        </div>	
-      </div>	
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 
