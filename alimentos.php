@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+$varsesion = $_SESSION['login'];
+
+if ($varsesion == null || $varsesion = '') {
+	echo  'Usted no tiene autorizacion';
+	die();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +26,7 @@
     <body>
          
         <header>
-            <h1 onclick="location.href='index.html'">KitSaludable</h1>
+            <h1 onclick="location.href='menuprincipal.php'">KitSaludable</h1>
         </header>
         <!--contenedor-->
         <div class="container-fluid ">
