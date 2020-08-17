@@ -1,3 +1,16 @@
+<?php
+
+  session_start();
+  $varsesion = $_SESSION['login'];
+
+  if($varsesion == null || $varsesion = '')
+  {
+    echo  'Usted no tiene autorizacion';
+    die();
+  }
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,7 +40,7 @@
       
     <div id="contenedor">
         <header>
-            <h1 id="ksinicio" onclick="location.href='index.html'">KitSaludable</h1>
+            <h1 id="ksinicio" onclick="location.href='menuprincipal.php'">KitSaludable</h1>
         </header>
         
         <nav>
@@ -42,7 +55,7 @@
                   'datos.php'" >Datos</button>
                 </li>
                 <li><button class="btn btn-primary" onclick="location.href=
-                  'index.php'">Cerrar sesion</button>
+                  'cerrarsesion.php'">Cerrar sesion</button>
                 </li>
               </ul>
         </nav>
@@ -56,14 +69,14 @@
             <section id="alimentos">
                 <article>
                   <h2><a>ALIMENTOS</a></h2>
-                  <img src="img/alimentos-sanos.jpg" alt="Dietas" width="350" height="350" class="img-responsive" onclick="location.href='alimentos.html'">
+                  <img src="img/alimentos-sanos.jpg" alt="Dietas" width="350" height="350" class="img-responsive" onclick="location.href='alimentos.php'">
                 </article>
             </section>    
             
             <section id="ejercicios">  
                 <article>
                   <h2><a>EJERCICIOS</a></h2>
-                  <img src="img/ella-el.jpg" alt="Ejercicios" width="350" height="350" class="img-responsive" onclick="location.href='ejercicios.html'">
+                  <img src="img/ella-el.jpg" alt="Ejercicios" width="350" height="350" class="img-responsive" onclick="location.href='ejercicios.php'">
                 </article>
             </section>
             
