@@ -10,7 +10,7 @@
     
     <body>
         <header>
-            <h1 onclick="location.href='index.html'">KitSaludable</h1>
+            <h1 onclick="location.href='menuprincipal.php'">KitSaludable</h1>
         </header>
         
         <div id="contenido1">
