@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
 	$num=mysqli_fetch_array($ret);
 	
 	if($num>0){
-		$extra="index.html";
+		$extra="menuprincipal.php";
 		$_SESSION['login']=$_POST['uemail'];
 		$_SESSION['id']=$num['id'];
 		$_SESSION['name']=$num['fname'];
@@ -23,8 +23,8 @@ if(isset($_POST['login'])){
 		$extra="index.php";
 		$host  = $_SERVER['HTTP_HOST'];
 		$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-		//header("location:http://$host$uri/$extra");
 		exit();
+		//header("location:http://$host$uri/$extra");
 	}
 }
 ?>

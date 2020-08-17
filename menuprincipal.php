@@ -1,3 +1,16 @@
+<?php
+
+  session_start();
+  $varsesion = $_SESSION['login'];
+
+  if($varsesion == null || $varsesion = '')
+  {
+    echo  'Usted no tiene autorizacion';
+    die();
+  }
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,7 +55,7 @@
                   'datos.php'" >Datos</button>
                 </li>
                 <li><button class="btn btn-primary" onclick="location.href=
-                  'index.php'">Cerrar sesion</button>
+                  'cerrarsesion.php'">Cerrar sesion</button>
                 </li>
               </ul>
         </nav>
