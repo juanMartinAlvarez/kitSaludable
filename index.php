@@ -1,20 +1,8 @@
-<?php 
-session_start();
+<?php session_start();
 require_once('dbconnection.php');
 require_once('includes/login.php');
 require_once('includes/registro.php');
 require_once('includes/olvido.php');
-
-  error_reporting(0);
-  if(!($_SESSION['login'] == null || $_SESSION['login'] = ''))
-  {
-    $extra = "menuprincipal.php";
-    $host = $_SERVER['HTTP_HOST'];
-    $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-		header("location:http://$host$uri/$extra");
-    exit();
-  }
-
 
 ?>
 <!DOCTYPE html>
