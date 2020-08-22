@@ -243,3 +243,11 @@ ALTER TABLE `ejerciciosRutinas`
 ALTER TABLE `ejerciciosRutinas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
+-- --------------------------------------------------------
+--
+-- Dumping data for table `alimentosDietas`
+--
+
+ALTER TABLE alimentosDietas ADD tipo varchar(255) NOT NULL;
+
+
