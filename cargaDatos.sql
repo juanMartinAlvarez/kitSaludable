@@ -60,7 +60,7 @@ INSERT INTO `alimentosDietas` (`id`, `id_dietas`, `id_alimentos`,`tipo`) VALUES 
 (16,1,10,'Cena'),
 (18,1,12,'Almuerzo'),
 (17,1,12,'Cena'),
-(18,1,13,'Almuerzo'),
+(81,1,13,'Almuerzo'),
 (19,1,14,'Almuerzo'),
 (20,1,14,'Cena'),
 (21,1,15,'Almuerzo'),
@@ -122,6 +122,6 @@ INSERT INTO `alimentosDietas` (`id`, `id_dietas`, `id_alimentos`,`tipo`) VALUES 
 (77,3,11,'Cena'),
 (78,3,12,'Almuerzo'),
 (79,3,12,'Cena'),
-(80,3,18,'Cena'),
+(80,3,18,'Cena');
 
 
