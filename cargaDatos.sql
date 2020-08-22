@@ -125,3 +125,68 @@ INSERT INTO `alimentosDietas` (`id`, `id_dietas`, `id_alimentos`,`tipo`) VALUES 
 (80,3,18,'Cena');
 
 
+-- --------------------------------------------------------
+--
+-- Dumping data for table `ejercicios`
+--
+INSERT INTO `ejercicios`(`id`, `nombre`) VALUES (1,'Zancadas'),
+(2,'Sentadillas Salto'),
+(3,'Zancadas Lateral'),
+(4,'Sentadillas Peso'),
+(5,'Patada de Burro'),
+(6,'Elevaciones Laterales'),
+(7,'Abdonminales'),
+(8,'Abdonminales Bicicleta'),
+(9,'Abdonminales Diagonal'),
+(10,'Plancha'),
+(11,'Plancha con pierna elevada'),
+(12,'Peso muerto'),
+(13,'HIP con barra'),
+(14,'Gemelos con prensa'),
+(15,'Press inclinado'),
+(16,'Flexiones con lastre'),
+(17,'Press militar'),
+(18,'Remo'),
+(19,'Triceps Polea Alta');
+
+
+
+
+
+
+-- --------------------------------------------------------
+--
+-- Dumping data for table `rutinas`
+--
+INSERT INTO `rutinas`(`id`, `nombre`,`intensidad`) VALUES (1,'Gluteos y piernas','Baja'),
+(2,'Abdominales','Media'),
+(3,'Pierna y Torso','Alta');
+
+
+-- --------------------------------------------------------
+--
+-- Dumping data for table `ejerciciosRutinas`
+--
+INSERT INTO `ejerciciosRutinas`(`id`, `id_rutinas`,`id_ejercicios`,`repeticiones`) VALUES (1,1,1,15),
+(2,1,2,25),
+(3,1,3,25),
+(4,1,4,20),
+(5,1,5,25),
+(6,1,6,25),
+(7,2,7,20),
+(8,2,8,20),
+(9,2,9,20),
+(10,2,10,20),
+(11,2,11,20),
+(12,3,12,40),
+(13,3,2,40),
+(14,3,13,36),
+(15,3,14,100),
+(16,3,10,60),
+(17,3,11,60),
+(18,3,13,90),
+(19,3,16,24),
+(20,3,17,36),
+(21,3,18,40),
+(22,3,19,40),
+(23,3,7,120);

@@ -225,7 +225,7 @@ ALTER TABLE `ejercicios`
 
 -- --------------------------------------------------------
 --
--- Table structure for table `usejerciciosRutinasers`
+-- Table structure for table `ejerciciosRutinas`
 --
 CREATE TABLE IF NOT EXISTS `ejerciciosRutinas`(
     `id` int(11) NOT NULL,
@@ -233,12 +233,12 @@ CREATE TABLE IF NOT EXISTS `ejerciciosRutinas`(
     `id_ejercicios` int(11) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
--- Indexes for table `usejerciciosRutinasers`
+-- Indexes for table `ejerciciosRutinas`
 --
 ALTER TABLE `ejerciciosRutinas`
     ADD PRIMARY KEY(`id`);
 --
--- AUTO_INCREMENT for table `usejerciciosRutinasers`
+-- AUTO_INCREMENT for table `ejerciciosRutinas`
 --
 ALTER TABLE `ejerciciosRutinas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
@@ -249,5 +249,7 @@ ALTER TABLE `ejerciciosRutinas`
 --
 
 ALTER TABLE alimentosDietas ADD tipo varchar(255) NOT NULL;
+
+ALTER TABLE ejerciciosRutinas ADD repeticiones int(11);
 
 
