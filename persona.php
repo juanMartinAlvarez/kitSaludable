@@ -6,8 +6,7 @@
     private $peso;
     private $altura;
     private $edad;
-    private $nombre;
-    private $apellido;
+    private $fecha;
 
     public function getid(){
       return $this->id;
@@ -40,23 +39,13 @@
     public function setedad($edad){
       $this->edad = $edad;
     }
-
-    public function getnombre(){
-      return $this->nombre;
-    }
-
-    public function setnombre($nombre){
-      $this->nombre = $nombre;
-    }
     
-    public function getapellido(){
-      return $this->apellido;
+    public function getfecha(){
+      return $this->fecha;
     }
-
-    public function setapellido($apellido){
-      $this->apellido = $apellido;
+    public function setfecha($fecha){
+      $this->fecha = $fecha;
     }
-
 
   }
 
