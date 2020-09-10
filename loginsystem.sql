@@ -107,7 +107,9 @@ CREATE TABLE IF NOT EXISTS `personas` (
     `altura` int(20) NOT NULL,
     `id_alimentosDietas` int(11),
     `id_ejerciciosRutinas`int(11),
-    `id_users`int(11) NOT NULL
+    `id_users`int(11) NOT NULL,
+    `fecha` DATETIME NOT NULL
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Indexes for table `personas`
