@@ -11,7 +11,8 @@ if (isset($_POST['login'])) {
 		$extra = "menuprincipal.php";
 		$_SESSION['login'] = $_POST['uemail'];
 		$_SESSION['id'] = $num['id'];
-		$_SESSION['name'] = $num['fname'];
+		$_SESSION['nombre'] = $num['fname'];
+		$_SESSION['apellido'] = $num['lname'];
 		$host = $_SERVER['HTTP_HOST'];
 		$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 		header("location:http://$host$uri/$extra");
