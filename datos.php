@@ -29,7 +29,8 @@
 				<div class="col-sm-12 user-img text-center">
 					<img src="img/usr.png" /><!-- user image-->
 				</div>
-				<!-- ** Informacion** -->
+        
+				<!-- Formulario con ingreso de datos de la persona -->
 
 				<form name="data-update" method="post" action="renovardatos.php">
 					<input class="form-control" type="number" 
@@ -40,8 +41,7 @@
             name="edad" id="edad" size="3" maxlength="3" placeholder="Edad">
           
 					<input class="btn btn-primary" type="submit" value="Actualizar datos">
-					<input class="btn btn-primary" type="button" value="Mostrar datos" onclick="location.href='?mostrarDatos'">
-					<!--<input class="btn btn-primary" type="button" value="Actualizar datos" onclick="location.href='?actualizarDatos'">-->
+					<input class="btn btn-primary" type="button" value="Mostrar datos" onclick="location.href='?mostrarDatosPersona'">
 				</form>
 			</div>
 	</div>
