@@ -8,7 +8,7 @@ if(isset($_POST['datos'])){
 	$num=mysqli_fetch_array($ret);
 	
 	if($num>0){
-		$extra="datos.html";
+		//$extra="datos.html";
 		$_SESSION['edad']=$num['edad']; //post cambiado por $num
 		$_SESSION['altura']=$num['altura'];
 		$_SESSION['peso']=$num['peso'];
@@ -18,7 +18,7 @@ if(isset($_POST['datos'])){
 		exit();
 	}else{
 		echo "<script>alert('Datos invalidos');</script>";
-		$extra="datos.html";
+		//$extra="datos.html";
 		$host  = $_SERVER['HTTP_HOST'];
 		$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
 		//header("location:http://$host$uri/$extra");
