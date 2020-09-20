@@ -1,11 +1,11 @@
 <?php session_start();
-require_once('dbconnection.php');
-require_once('includes/login.php');
-require_once('includes/registro.php');
-require_once('includes/olvido.php');
-
+  require_once('dbconnection.php');
+  require_once('includes/login.php');
+  require_once('includes/registro.php');
+  require_once('includes/olvido.php');
 ?>
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<title>KitSaludable</title>
@@ -13,8 +13,6 @@ require_once('includes/olvido.php');
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Elegent Tab Forms,Login Forms,Sign up Forms,Registration Forms,News latter Forms,Elements"./>
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		</script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 		<script type="text/javascript">
@@ -31,7 +29,6 @@ require_once('includes/olvido.php');
 
 <body>
 <div class="main">
-
   
 <div class="sap_tabs">
   <h1>Kit Saludable</h1>
@@ -71,16 +68,13 @@ require_once('includes/olvido.php');
       <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
         <div class="facts">
           <div class="login">
-            <!--<div class="buttons"></div>-->
             <form name="login" action="" method="post">
               <input type="text" class="text" name="uemail" value="" placeholder="Ingresa tu correo"  ><a href="#" class=" icon email"></a>
               <input type="password" value="" name="password" placeholder="Ingresa una contraseña"><a href="#" class=" icon lock"></a>
-              <!--<div class="p-container">-->
               <div class="submit two">
                 <input type="submit" name="login" value="Ingresar" >
               </div>
               <div class="clear"> </div>
-              <!--</div>-->
             </form>
           </div>
         </div> 
@@ -88,9 +82,8 @@ require_once('includes/olvido.php');
         <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
           <div class="facts">
             <div class="login">
-              <!--<div class="buttons"></div>-->
               <form name="login" action="" method="post">
-                <input type="text" class="text" name="femail" value="" placeholder="Ingresa tu correo" required  ><a href="#" class=" icon email"></a>
+                <input type="text" class="text" name="femail" value="" placeholder="En construccion" required  ><a href="#" class=" icon email"></a>
                 <div class="submit three">
                   <input type="submit" name="send" onClick="myFunction()" value="Enviar correo">
                 </div>
