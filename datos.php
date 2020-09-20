@@ -45,9 +45,47 @@
 				</form>
 			</div>
 	</div>
+  
+  <!-- Mostrar datos en pantalla-->  
+  <div class="bg-dark col-sm-12">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Peso</th>
+          <th scope="col">Altura</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <?php 
+          $fila = mostrarDatosPersona();
+            if (isset($_GET['mostrarDatosPersona'])) 
+            foreach ($fila as $persona) { ?>
+              <td><?php echo $persona->getid() ?></th>
+              <td><?php echo $persona->getPeso() ?></td>
+              <td><?php echo $persona->getAltura() ?></td>
+              <td><?php echo $persona->getEdad() ?></td>
+              <td><?php echo $persona->getNombre(); ?></td>
+              <td><?php echo $persona->getApellido() ?></td>
+              <td><?php echo $persona->getFecha() ?></td>
+            <?php } ?>
+        </tr>
+  </tbody>
+
+      </table>
+  </div> 
+    
+</div>
+
 	<!-- Bootstrap CSS -->
 	<script src="js/jquery/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery/jquery-3.4.1.slim.min.js"></script>
 	<script src="js/popper/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
 </body>
