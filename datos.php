@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="estilos/estilos.css">
 	<link rel="stylesheet" href="estilos/estilosDatos.css">
 	<link href="css/bootstrap.css" media="all" rel="stylesheet">
-	<title>Datos de</title>
+	<title>Datos de Usuario</title>
 	<script>
 		function actualizarDatos() {
 			alert("Datos actualizados exitosamente");
