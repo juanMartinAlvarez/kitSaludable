@@ -3,7 +3,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "-03:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -109,6 +109,7 @@ CREATE TABLE IF NOT EXISTS `personas` (
     `id_ejerciciosRutinas`int(11),
     `id_users`int(11) NOT NULL,
     `fecha` DATETIME NOT NULL
+    /*fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP-->*/
   
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
