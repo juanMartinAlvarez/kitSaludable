@@ -13,10 +13,10 @@ CREATE TABLE IF NOT EXISTS `personas` (
     `id_alimentosDietas` int(11),
     `id_ejerciciosRutinas`int(11),
     `id_users`int(11) NOT NULL,
-    `fecha` DATETIME NOT NULL
+    `fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
 -- Indexes for table `personas`
+-- Config Id Pesonas.
 --
 ALTER TABLE `personas`
   ADD PRIMARY KEY (`id`);

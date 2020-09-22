@@ -1,4 +1,4 @@
--- PHP Version: 7.2.19
+-- PHP Version: 7.2.19 local
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'f925916e2754e5e03f75dd58a5733251');
+(1, 'admin', 'adminadmin');
 
 -- --------------------------------------------------------
 
@@ -54,8 +54,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `fname`, `lname`, `email`, `password`, `posting_date`) VALUES
-(9, 'Anuj', 'Kumar', 'demouser@gmail.com', 'Test@123', '2020-04-15 18:30:00'),
-(11, 'Anuj', 'Kumar', 'phpgurukulofficial@gmail.com', 'Test@123', '2020-04-15 18:30:00');
+(1, 'Martin', 'Alvarez', 'martin@alvarez.com', '2020', '2020-04-15 18:30:00'),
+(2, 'Fernando', 'Lamas', 'fernando@lamas.com', '2020', '2020-04-15 18:30:00'),
+(3, 'Lucas', 'Caruso', 'lucas@caruso.com', '2020', '2020-04-15 18:30:00');
+
 
 --
 -- Indexes for dumped tables
@@ -108,9 +110,7 @@ CREATE TABLE IF NOT EXISTS `personas` (
     `id_alimentosDietas` int(11),
     `id_ejerciciosRutinas`int(11),
     `id_users`int(11) NOT NULL,
-    `fecha` DATETIME NOT NULL
-    /*fecha` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP-->*/
-  
+    `fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Indexes for table `personas`
