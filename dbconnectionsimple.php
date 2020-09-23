@@ -4,7 +4,7 @@ function conectar(){
     $host = 'localhost';
     $user = 'root';
     $pw = '';
-    $db = 'loginsystem';
+    $db = 'kitSaludable';
     $con = new mysqli($host,$user,$pw,$db);
     
     // Check connection
