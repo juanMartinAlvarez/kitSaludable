@@ -32,10 +32,8 @@ function mostrarDatosPersona(){
   }
 }
 
-function renovarDatos($peso,$altura,$edad,$sessionid,$fecha){
-  // setear fecha actualizada, en la consulta
-  //$fecha = date("Y-m-d H:i:s", strtotime($string));
-  $sql = "insert into personas(peso,altura,edad,id_users,fecha) values($peso,$altura,$edad,$sessionid,$fecha)";
+function renovarDatos($peso,$altura,$edad,$sessionid){
+  $sql = "insert into personas(peso,altura,edad,id_users) values($peso,$altura,$edad,$sessionid)";
   $con = conectar();
   
   if($peso = "" || $peso == null){
