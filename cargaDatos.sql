@@ -16,14 +16,14 @@ INSERT INTO `alimentos`(`id`, `nombre`, `calorias` ) VALUES (1,'Yogurt con cerea
 (13,'Queso',250),
 (14,'Arroz integral',130),
 (15,'Huevo',155),
-(16,'Leche',),
-(17,'Ricota',),
-(18,'Postre Diet',),
-(19,'Caldo',),
-(20,'Barra de ceral',),
-(21,'Verduras Cocidas',),
-(22,'Gelatina',),
-(23,'Jamon',);
+(16,'Leche',47),
+(17,'Ricota',174),
+(18,'Postre Diet',99),
+(19,'Caldo',267),
+(20,'Barra de ceral',350),
+(21,'Verduras Cocidas',36),
+(22,'Gelatina',61),
+(23,'Jamon',145);
 
 
 
