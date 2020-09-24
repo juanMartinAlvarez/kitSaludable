@@ -149,18 +149,13 @@ INSERT INTO `ejercicios`(`id`, `nombre`) VALUES (1,'Zancadas'),
 (18,'Remo'),
 (19,'Triceps Polea Alta');
 
-
-
-
-
-
 -- --------------------------------------------------------
 --
 -- Dumping data for table `rutinas`
 --
-INSERT INTO `rutinas`(`id`, `nombre`,`intensidad`) VALUES (1,'Gluteos y piernas','Baja'),
-(2,'Abdominales','Media'),
-(3,'Pierna y Torso','Alta');
+INSERT INTO `rutinas`(`id`, `nombre`,`intensidad`,`codigo`,) VALUES (1,'Gluteos y piernas','Baja','gluteospiernas'),
+(2,'Abdominales','Media','abdominales'),
+(3,'Pierna y Torso','Alta','piernatorso');
 
 
 -- --------------------------------------------------------
