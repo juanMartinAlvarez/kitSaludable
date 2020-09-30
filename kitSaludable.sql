@@ -49,8 +49,6 @@ COMMIT;
 --
 CREATE TABLE IF NOT EXISTS `personas` (
     `id` int(11) NOT NULL,
-    `nombre` varchar(255) NOT NULL,
-    `apellido` varchar(255) NOT NULL,
     `edad` int NOT NULL,
     `peso` int(20) NOT NULL,
     `altura` int(20) NOT NULL,
@@ -101,10 +99,10 @@ INSERT INTO `rutinas`(`id`, `nombre`,`intensidad`,`url`) VALUES (1,'Full body - 
 
 -- --------------------------------------------------------
 --
--- Table structure for table `rutina`
+-- Table structure for table `listadejercicios`
 --
-CREATE TABLE IF NOT EXISTS `rutina`(
-    `id_rutina` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `listadejercicios`(
+    `id` int(11) NOT NULL,
     `id_rutinas` int(11) NOT NULL,
     `numero_de_dia` int(11)NOT NULL,
     `id_ejercicio`  int(11)NOT NULL,
@@ -115,18 +113,18 @@ CREATE TABLE IF NOT EXISTS `rutina`(
 --
 -- Indexes for table `rutinas`
 --
-ALTER TABLE `rutina`
-    ADD PRIMARY KEY(`id_rutina`);
+ALTER TABLE `listadejercicios`
+    ADD PRIMARY KEY(`id`);
 --
 -- AUTO_INCREMENT for table `rutinas`
 --
-ALTER TABLE `rutina`
-  MODIFY `id_rutina` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+ALTER TABLE `listadejercicios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 -- --------------------------------------------------------
 --
 -- Dumping data for table `rutina`
 --
-INSERT INTO `rutina`(`id_rutina`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`,`series`,`repeticiones`,`descanso`) VALUES (1,'1','1','1','4','10-10-10-8','60s'),
+INSERT INTO `listadejercicio`(`id`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`,`series`,`repeticiones`,`descanso`) VALUES (1,'1','1','1','4','10-10-10-8','60s'),
 (2,'1','1','2','4','10-10-10-8','60s'),
 (3,'1','1','3','4','10-10-10-8','60s'),
 (4,'1','1','4','4','10-10-10-8','60s'),
