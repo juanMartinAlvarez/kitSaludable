@@ -64,16 +64,16 @@
         <tr>
           <?php 
           $fila = mostrarDatosPersona();
-            if (isset($_GET['mostrarDatosPersona'])) 
-            foreach ($fila as $persona) { ?>
-              <td><?php echo $persona->getid() ?></th>
-              <td><?php echo $persona->getPeso() ?></td>
-              <td><?php echo $persona->getAltura() ?></td>
-              <td><?php echo $persona->getEdad() ?></td>
-              <td><?php echo $persona->getNombre(); ?></td>
-              <td><?php echo $persona->getApellido() ?></td>
-              <td><?php echo $persona->getFecha() ?></td>
-            <?php } ?>
+            if (isset($_GET['mostrarDatosPersona'])){ 
+              foreach ($fila as $persona) { ?>
+                <td><?php echo $persona->getid() ?></th>
+                <td><?php echo $persona->getPeso() ?></td>
+                <td><?php echo $persona->getAltura() ?></td>
+                <td><?php echo $persona->getEdad() ?></td>
+                <td><?php echo $persona->getNombre(); ?></td>
+                <td><?php echo $persona->getApellido() ?></td>
+                <td><?php echo $persona->getFecha() ?></td>
+              <?php }} ?>
         </tr>
   </tbody>
 
