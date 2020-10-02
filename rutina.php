@@ -33,5 +33,8 @@
     //_____Descanso_____
     public function getDescanso(){return $this->descanso;}
     public function setDescanso($descanso){$this->descanso = $descanso;}
+    //_____Musculo_____
+    public function getMusculo(){return $this->musculo;}
+    public function setMusculo($musculo){$this->musculo = $musculo;}
   }
 ?>
