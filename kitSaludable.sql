@@ -124,7 +124,7 @@ ALTER TABLE `listadejercicios`
 --
 -- Dumping data for table `rutina`
 --
-INSERT INTO `rutina`(`id_rutina`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`,`series`,`repeticiones`,`descanso`) VALUES (1,'2','1','1','4','10-10-10-8','60s'),
+INSERT INTO `listadejercicios`(`id`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`,`series`,`repeticiones`,`descanso`) VALUES (1,'2','1','1','4','10-10-10-8','60s'),
 (2,'2','1','2','4','10-10-10-8','60s'),
 (3,'2','1','3','4','10-10-10-8','60s'),
 (4,'2','1','4','4','10-10-10-8','60s'),
