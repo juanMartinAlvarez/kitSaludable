@@ -4,7 +4,9 @@ include_once("rutina.php");
 
 function mapearRutinas(){
 
-  $sql = 'SELECT * FROM rutina';
+  $sql = 'select * from ejercicio e, rutinas r, rutina x
+  where x.id_rutinas = r.id
+  and x.id_ejercicio = e.id';
   $con = conectar();// dbconnectionsimple.php funtion
   if($con -> query($sql)){ // check consulta ok
     $rutinasActualizadas = [];
@@ -20,6 +22,8 @@ function mapearRutinas(){
         $myRutina->setSerie($row['series']);
         $myRutina->setRepeticiones($row['repeticiones']);
         $myRutina->setDescanso($row['descanso']);
+        $myRutina->setNombre($row['nombre']);
+        $myRutina->setMusculo($row['musculo']);
         $rutinasActualizadas[]=$myRutina;}
     }else{
 		  echo "Ingresar datos...";
