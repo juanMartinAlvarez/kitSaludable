@@ -68,28 +68,32 @@ if ($varsesion == null || $varsesion = '') {
       <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
         <tr class="success">
           <th><h2>Dia°</h2></th>
+          <th><h2>Musculo</h2></th>
+          <th><h2>Nombre</h2></th>
           <th><h2>Series</h2></th>
           <th><h2>Repeticiones</h2></th>
           <th><h2>Descanso</h2></th>
         </tr>
 
-          <?php//aca hay que hacer una query, si en el get figura algun codigo que conozcamos, 
-          //hay que buscar el codigo en la base y mostrar la info de los ejercicios vinculados a ese codigo(rutina)
-          //$listaRutinas[] = mapearRutinas();
-          //if(isset($_GET['codigo'])){
-          //  echo "info de ese codigo";
-         // }?>
+          <?php /* Falta vincular URL con el mapear rutinas para mostrar.....
+          aca hay que hacer una query, si en el get figura algun codigo que conozcamos, 
+          hay que buscar el codigo en la base y mostrar la info de los ejercicios vinculados a ese codigo(rutina)
+          $listaRutinas[] = mapearRutinas();
+          if(isset($_GET['codigo'])){
+            echo "info de ese codigo";
+          }*/?>
 
-          <?php 
+          <?php
             $fila= mapearRutinas();
             foreach($fila as $rutina){?>
             <tr><td><h2><?php echo $rutina->getDia(); ?></h2></td>
+                <td><h2><?php echo $rutina->getMusculo(); ?></h2></td>
+                <td><h2><?php echo $rutina->getNombre(); ?></h2></td>
                 <td><h2><?php echo $rutina->getSerie(); ?></h2></td>
                 <td><h2><?php echo $rutina->getRepeticiones(); ?></h2></td>
                 <td><h2><?php echo $rutina->getDescanso(); ?></h2></td></tr>
             <?php }
-          ?>
-                
+          ?>      
         </tr>
       </table>
     </div>
