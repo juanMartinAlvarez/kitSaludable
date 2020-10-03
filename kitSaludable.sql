@@ -7,6 +7,7 @@ SET time_zone = "-03:00";
 --
 -- Database
 --
+CREATE Database IF NOT EXISTS KitSaludable;
 -- --------------------------------------------------------
 --
 -- Table structure for table `users`
@@ -235,8 +236,7 @@ ALTER TABLE `dietas`
 CREATE TABLE IF NOT EXISTS `alimentos`(
     `id` int(11) NOT NULL,
     `nombre` varchar(255) NOT NULL, 
-    `calorias` int(20) NOT NULL,
-    `tipo` varchar(255) NOT NULL
+    `calorias` int(20) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Indexes for table `alimentos`
@@ -257,7 +257,8 @@ ALTER TABLE `alimentos`
 CREATE TABLE IF NOT EXISTS `alimentosDietas`(
     `id` int(11) NOT NULL,
     `id_dietas` int(11) NOT NULL,
-    `id_alimentos` int(11) NOT NULL
+    `id_alimentos` int(11) NOT NULL,
+    `tipo` varchar(255) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Indexes for table `alimentosDietas`
