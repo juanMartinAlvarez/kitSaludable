@@ -2,11 +2,15 @@
 include("dbconnectionsimple.php");
 include_once("rutina.php");
 
-function mapearRutinas(){
+function mapearRutinas($idUrl){
 
-  $sql = 'select * from ejercicio e, rutinas r, listadejercicios x
+  
+  $sql = 'select * from dietas e, rutinas r, listaddietass x
   where x.id_rutinas = r.id
-  and x.id_ejercicio = e.id';
+  and x.id_dietas = e.id
+  and x.id_rutinas = '.$idUrl.'';
+  //echo $sql;
+
   $con = conectar();// dbconnectionsimple.php funtion
   if($con -> query($sql)){ // check consulta ok
     $rutinasActualizadas = [];
@@ -18,7 +22,7 @@ function mapearRutinas(){
         $myRutina->setId($row['id']);
         $myRutina->setIdTipoDeRutinas($row['id_rutinas']);
         $myRutina->setDia($row['numero_de_dia']);
-        $myRutina->setIdEjercicio($row['id_ejercicio']);
+        $myRutina->setIddietas($row['id_dietas']);
         $myRutina->setSerie($row['series']);
         $myRutina->setRepeticiones($row['repeticiones']);
         $myRutina->setDescanso($row['descanso']);
@@ -34,12 +38,12 @@ function mapearRutinas(){
     echo " DB Error No se pudo realizar la consulta: mapearRutinas()";
   }
 }
-function mostrarEjerciciosYRutinas(){
+function mostrardietassYRutinas(){
 /*
  select e.nombre, x.repeticiones
-  from ejercicios e, rutinas r, ejerciciosRutinas x
+  from dietass e, rutinas r, dietassRutinas x
   where x.id_rutinas = r.id
-  and x.id_ejercicios = e.id
+  and x.id_dietass = e.id
   and r.id= 1 -> el id de la rutina que queres mostrar que lo obtenes de la rutina que esta consultando el chabon
 */
 }
