@@ -235,7 +235,8 @@ ALTER TABLE `dietas`
 CREATE TABLE IF NOT EXISTS `alimentos`(
     `id` int(11) NOT NULL,
     `nombre` varchar(255) NOT NULL, 
-    `calorias` int(20) NOT NULL
+    `calorias` int(20) NOT NULL,
+    `tipo` varchar(255) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Indexes for table `alimentos`
@@ -305,11 +306,11 @@ INSERT INTO `alimentos`(`id`, `nombre`, `calorias` ) VALUES (1,'Yogurt con cerea
 -- Dumping data for table `dietas`
 --
 INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',2000),
-(2,'Carnes y lácteos',2000),
+(2,'Carnes y lacteos',2000),
 (3,'Dieta de inicio',2400),
 (4,'Disociada combinada',2400),
-(5,'Hipercalórica1',2800),
-(6,'Hipercalórica2',2800);
+(5,'Hipercalorica1',2800),
+(6,'Hipercalorica2',2800);
 
 -- --------------------------------------------------------
 --
