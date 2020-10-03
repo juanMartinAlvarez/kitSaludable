@@ -23,7 +23,7 @@ if ($varsesion == null || $varsesion = '') {
     <title>Ejercicios</title>
     <script>
       $(function(){
-        $('#select-dietas').on('change', function() {
+        $('#select-ejercicios').on('change', function() {
         $('#the-link').attr('href', '?' + $(this).val());
         });
       });
@@ -40,7 +40,7 @@ if ($varsesion == null || $varsesion = '') {
         <h3 id="tRow1">RUTINAS:</h3>
         <!-- si existen ejercicios en la base de datos hay que hacer una clase para ejercicios y mostrarlos igual que mostramos los datos en el cruddatos -->
 
-        <select id="select-dietas" multiple>
+        <select id="select-ejercicios" multiple>
           <option disable selected>--Seleccione una Rutina--</option>
           <?php
           require('crudrutinas.php');
@@ -51,7 +51,7 @@ if ($varsesion == null || $varsesion = '') {
             $result = $con->query($sql);
             if ($result->num_rows > 0) {
               foreach ($result as $opciones):?>
-                <option value="<?php echo $opciones['url']; ?>"><?php echo $opciones['nombre']; ?></option><?php
+                <option value="<?php echo $opciones['id']; ?>"><?php echo $opciones['nombre']; ?></option><?php
               endforeach;
               }
             }
@@ -60,6 +60,19 @@ if ($varsesion == null || $varsesion = '') {
       
         <div>
           <br></br><a href='?' id='the-link'> Seleccionar</a><br></br>
+          <?php if(isset($_GET['1'])){
+            $idUrl = "1";
+            //echo $idUrl;
+          }
+           if(isset($_GET['2'])){
+            $idUrl = "2";
+            //echo $idUrl;
+           }
+            if(isset($_GET['3'])){
+            $idUrl = "3";
+            //echo $idUrl;
+          }
+          ?>
         </div>
       </div>
 
@@ -84,7 +97,10 @@ if ($varsesion == null || $varsesion = '') {
           }*/?>
 
           <?php
-            $fila= mapearRutinas();
+          if(isset($idUrl)){
+
+          
+            $fila= mapearRutinas($idUrl);
             foreach($fila as $rutina){?>
             <tr><td><h2><?php echo $rutina->getDia(); ?></h2></td>
                 <td><h2><?php echo $rutina->getMusculo(); ?></h2></td>
@@ -93,6 +109,7 @@ if ($varsesion == null || $varsesion = '') {
                 <td><h2><?php echo $rutina->getRepeticiones(); ?></h2></td>
                 <td><h2><?php echo $rutina->getDescanso(); ?></h2></td></tr>
             <?php }
+            }
           ?>      
         </tr>
       </table>
