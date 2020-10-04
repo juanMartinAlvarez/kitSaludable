@@ -112,18 +112,18 @@ CREATE TABLE IF NOT EXISTS `listadejercicios`(
     `descanso` varchar (255)    
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
--- Indexes for table `rutinas`
+-- Indexes for table `listadejercicios`
 --
 ALTER TABLE `listadejercicios`
     ADD PRIMARY KEY(`id`);
 --
--- AUTO_INCREMENT for table `rutinas`
+-- AUTO_INCREMENT for table `listadejercicios`
 --
 ALTER TABLE `listadejercicios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 -- --------------------------------------------------------
 --
--- Dumping data for table `rutina`
+-- Dumping data for table `listadejercicios`
 --
 INSERT INTO `listadejercicios`(`id`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`,`series`,`repeticiones`,`descanso`) VALUES (1,'2','1','1','4','10-10-10-8','60s'),
 (2,'2','1','2','4','10-10-10-8','60s'),
@@ -208,26 +208,6 @@ INSERT INTO `ejercicio`(`id`, `nombre`,`musculo`) VALUES (1,'Dominadas','Espalda
 (29,'Elevación piernas','Abdominales'),
 (30,'Abdonminales','Abdominales');
 
--- --------------------------------------------------------
---
--- Table structure for table `dietas`
---
-CREATE TABLE IF NOT EXISTS `dietas`(
-    `id` int(11) NOT NULL,
-    `nombre` varchar(255) NOT NULL, 
-    `calorias` varchar(255) NOT NULL
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
--- Indexes for table `dietas`
---
-ALTER TABLE `dietas`
-    ADD PRIMARY KEY(`id`);
---
--- AUTO_INCREMENT for table `dietas`
---
-ALTER TABLE `dietas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
 
 -- --------------------------------------------------------
 --
@@ -249,31 +229,7 @@ ALTER TABLE `alimentos`
 ALTER TABLE `alimentos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
-
 -- --------------------------------------------------------
---
--- Table structure for table `alimentosDietas`
---
-CREATE TABLE IF NOT EXISTS `alimentosDietas`(
-    `id` int(11) NOT NULL,
-    `id_dietas` int(11) NOT NULL,
-    `id_alimentos` int(11) NOT NULL,
-    `tipo` varchar(255) NOT NULL
-)ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
--- Indexes for table `alimentosDietas`
---
-ALTER TABLE `alimentosDietas`
-    ADD PRIMARY KEY(`id`);
---
--- AUTO_INCREMENT for table `alimentosDietas`
---
-ALTER TABLE `alimentosDietas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-  
-  -- --------------------------------------------------------
-
-  -- --------------------------------------------------------
 --
 -- Dumping data for table `alimentos`
 --
@@ -300,19 +256,27 @@ INSERT INTO `alimentos`(`id`, `nombre`, `calorias` ) VALUES (1,'Yogurt con cerea
 (22,'Gelatina',61),
 (23,'Jamon',145);
 
-
-
 -- --------------------------------------------------------
 --
--- Dumping data for table `dietas`
+-- Table structure for table `alimentosDietas`
 --
-INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',2000),
-(2,'Carnes y lacteos',2000),
-(3,'Dieta de inicio',2400),
-(4,'Disociada combinada',2400),
-(5,'Hipercalorica1',2800),
-(6,'Hipercalorica2',2800);
-
+CREATE TABLE IF NOT EXISTS `alimentosDietas`(
+    `id` int(11) NOT NULL,
+    `id_dietas` int(11) NOT NULL,
+    `id_alimentos` int(11) NOT NULL,
+    `tipo` varchar(255) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Indexes for table `alimentosDietas`
+--
+ALTER TABLE `alimentosDietas`
+    ADD PRIMARY KEY(`id`);
+--
+-- AUTO_INCREMENT for table `alimentosDietas`
+--
+ALTER TABLE `alimentosDietas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
 -- --------------------------------------------------------
 --
 -- Dumping data for table `alimentosDietas`
@@ -398,3 +362,33 @@ INSERT INTO `alimentosDietas` (`id`, `id_dietas`, `id_alimentos`,`tipo`) VALUES 
 (78,3,12,'Almuerzo'),
 (79,3,12,'Cena'),
 (80,3,18,'Cena');
+-- --------------------------------------------------------
+--
+-- Table structure for table `dietas`
+--
+CREATE TABLE IF NOT EXISTS `dietas`(
+    `id` int(11) NOT NULL,
+    `nombre` varchar(255) NOT NULL, 
+    `calorias` varchar(255) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Indexes for table `dietas`
+--
+ALTER TABLE `dietas`
+  ADD PRIMARY KEY(`id`);
+--
+-- AUTO_INCREMENT for table `dietas`
+--
+ALTER TABLE `dietas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
+-- --------------------------------------------------------
+--
+-- Dumping data for table `dietas`
+--
+INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',2000),
+(2,'Carnes y lacteos',2000),
+(3,'Dieta de inicio',2400),
+(4,'Disociada combinada',2400),
+(5,'Hipercalorica1',2800),
+(6,'Hipercalorica2',2800);
