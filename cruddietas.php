@@ -5,7 +5,7 @@ include_once("claseAlimentos.php");
 function mapearDietas($idUrl){
 
   
-  $sql = 'select a.id, a.nombre , a.calorias, d.id, d.nombre as dieta, d.calorias, x.id, x.id_dietas, x.id_alimentos,x.tipo 
+  $sql = 'select a.id, a.nombre , a.calorias, d.id, d.nombre as dieta, d.calorias as DCalorias, x.id, x.id_dietas, x.id_alimentos,x.tipo 
   from alimentos a, dietas d, alimentosdietas x
   where x.id_alimentos = a.id
   and x.id_dietas = d.id
@@ -23,6 +23,7 @@ function mapearDietas($idUrl){
         $myDieta->setId($row['id']);
         $myDieta->setNombre($row['nombre']);
         $myDieta->setCalorias($row['calorias']);
+        $myDieta->setTipo($row['tipo']);
         $alimentosActualizados[]=$myDieta;}
     }else{
 		  echo "Ingresar datos...";

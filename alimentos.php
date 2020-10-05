@@ -95,6 +95,7 @@ if ($varsesion == null || $varsesion = '') {
         <tr class="success">
           <th><h2>Nombre</h2></th>
           <th><h2>Calorias</h2></th>
+          <th><h2>Tipo</h2></th>
         </tr>
 
           <?php /* Falta vincular URL con el mapear rutinas para mostrar.....
@@ -113,6 +114,7 @@ if ($varsesion == null || $varsesion = '') {
             foreach($fila as $alimento){?>
             <tr><td><h2><?php echo $alimento->getNombre(); ?></h2></td>
                 <td><h2><?php echo $alimento->getCalorias(); ?></h2></td>
+                <td><h2><?php echo $alimento->getTipo(); ?></h2></td>
             <?php }
             }
           ?>      
