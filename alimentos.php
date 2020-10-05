@@ -34,12 +34,10 @@ if ($varsesion == null || $varsesion = '') {
     <header>
       <h1 onclick="location.href='menuprincipal.php'">KitSaludable</h1>
     </header>
-
+    <!-- Row 1 Select Dieta -->
     <div id="contenido1">
       <div id="row1">
         <h3 id="tRow1">DIETAS:</h3>
-        <!-- si existen ejercicios en la base de datos hay que hacer una clase para ejercicios y mostrarlos igual que mostramos los datos en el cruddatos -->
-
         <select id="select-dietas" multiple>
           <option disable selected>--Seleccione una Dieta--</option>
           <?php
@@ -71,59 +69,28 @@ if ($varsesion == null || $varsesion = '') {
           <br></br><a href='?' id='historial'> Aplicar </a><br></br>
         </div>
       </div>
-
-    <div id="row2">
-    <h3 id="tRow2">LISTA DE ALIMENTOS</h3> 
-      <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
-        <tr class="success">
-          <th><h2>Nombre</h2></th>
-          <th><h2>Calorias</h2></th>
-          <th><h2>Tipo</h2></th>
-        </tr>
-        <?php
-          if(isset($idUrl)){
-            $fila= mapearDietas($idUrl);
-            foreach($fila as $alimento){?>
-            <tr><td><h2><?php echo $alimento->getNombre(); ?></h2></td>
-                <td><h2><?php echo $alimento->getCalorias(); ?></h2></td>
-                <td><h2><?php echo $alimento->getTipo(); ?></h2></td>
-            <?php }
-            }
-        ?>      
-        </tr>
-      </table>
-    </div>
-    </div>
-    <!--
-    <div id="contenido2">
-      <div id="row1">
-        <h3>Cantidad de calorias que quieres quemar</h3><br></br>
-          <select name="select Calorias" multiple>
-            <option value="" disable selected>--Seleccione una Calorias--</option>
-            <option value="100">100</option>
-            <option value="200">200</option>
-            <option value="300">300</option>
-            <option value="400">400</option>
-            <option value="500">500</option>
-          </select>
-        </div>
-        <div id="row2">
-        <h3>Lista de ejercicios de la de la rutina seleccionada</h3><br></br>
-        <table bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
+      <!-- Row 2 Alimentos table -->
+      <div id="row2">
+      <h3 id="tRow2">LISTA DE ALIMENTOS</h3> 
+        <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
           <tr class="success">
-            <th><h2>N°</h2></th>
-            <th><h2>Alimentos</h2></th>
+            <th><h2>Nombre</h2></th>
             <th><h2>Calorias</h2></th>
-            <th><h2>Descripcion</h2></th>
+            <th><h2>Tipo</h2></th>
           </tr>
-          <tr>
-            <td><h2>1</h2></td>
-            <td><h2>2</h2></td>
-            <td><h2>3</h2></td>
-            <td><h2>4</h2></td>
+          <?php
+            if(isset($idUrl)){
+              $fila= mapearDietas($idUrl);
+              foreach($fila as $alimento){?>
+              <tr><td><h2><?php echo $alimento->getNombre(); ?></h2></td>
+                  <td><h2><?php echo $alimento->getCalorias(); ?></h2></td>
+                  <td><h2><?php echo $alimento->getTipo(); ?></h2></td>
+              <?php }
+              }
+          ?>      
           </tr>
         </table>
       </div>
-    </div>-->
+    </div>
   </body>
 </html> 
