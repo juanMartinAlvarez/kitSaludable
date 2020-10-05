@@ -59,33 +59,16 @@ if ($varsesion == null || $varsesion = '') {
         </select>
       
         <div>
-          <br></br><a href='?' id='the-link'> Seleccionar</a><br></br>
-          <?php if(isset($_GET['1'])){
-            $idUrl = "1";
-            //echo $idUrl;
-          }
-           if(isset($_GET['2'])){
-            $idUrl = "2";
-            //echo $idUrl;
-           }
-            if(isset($_GET['3'])){
-            $idUrl = "3";
-            //echo $idUrl;
-          }
-          if(isset($_GET['4'])){
-            $idUrl = "4";
-            //echo $idUrl;
-          }
-          if(isset($_GET['5'])){
-            $idUrl = "5";
-            //echo $idUrl;
-          }
-          if(isset($_GET['6'])){
-            $idUrl = "6";
-            //echo $idUrl;
-          }
-          
+          <br></br><a href='?' id='the-link'>Seleccionar</a><br></br>
+          <?php 
+            if(isset($_GET['1'])){$idUrl="1";}
+            if(isset($_GET['2'])){$idUrl="2";}
+            if(isset($_GET['3'])){$idUrl="3";}
+            if(isset($_GET['4'])){$idUrl="4";}
+            if(isset($_GET['5'])){$idUrl="5";}
+            if(isset($_GET['6'])){$idUrl="6";}
           ?>
+          <br></br><a href='?' id='historial'> Aplicar </a><br></br>
         </div>
       </div>
 
@@ -97,19 +80,8 @@ if ($varsesion == null || $varsesion = '') {
           <th><h2>Calorias</h2></th>
           <th><h2>Tipo</h2></th>
         </tr>
-
-          <?php /* Falta vincular URL con el mapear rutinas para mostrar.....
-          aca hay que hacer una query, si en el get figura algun codigo que conozcamos, 
-          hay que buscar el codigo en la base y mostrar la info de los ejercicios vinculados a ese codigo(rutina)
-          $listaRutinas[] = mapearRutinas();
-          if(isset($_GET['codigo'])){
-            echo "info de ese codigo";
-          }*/?>
-
-          <?php
+        <?php
           if(isset($idUrl)){
-
-          
             $fila= mapearDietas($idUrl);
             foreach($fila as $alimento){?>
             <tr><td><h2><?php echo $alimento->getNombre(); ?></h2></td>
@@ -117,7 +89,7 @@ if ($varsesion == null || $varsesion = '') {
                 <td><h2><?php echo $alimento->getTipo(); ?></h2></td>
             <?php }
             }
-          ?>      
+        ?>      
         </tr>
       </table>
     </div>

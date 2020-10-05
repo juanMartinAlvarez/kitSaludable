@@ -10,7 +10,6 @@ function mapearDietas($idUrl){
   where x.id_alimentos = a.id
   and x.id_dietas = d.id
   and x.id_dietas = '.$idUrl.'';
-  //echo $sql;
 
   $con = conectar();// dbconnectionsimple.php funtion
   if($con -> query($sql)){ // check consulta ok

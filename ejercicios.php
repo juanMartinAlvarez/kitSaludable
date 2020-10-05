@@ -36,10 +36,9 @@ if ($varsesion == null || $varsesion = '') {
     </header>
 
     <div id="contenido1">
+      <!-- Row 1 Select rutina -->
       <div id="row1">
         <h3 id="tRow1">RUTINAS:</h3>
-        <!-- si existen ejercicios en la base de datos hay que hacer una clase para ejercicios y mostrarlos igual que mostramos los datos en el cruddatos -->
-
         <select id="select-ejercicios" multiple>
           <option disable selected>--Seleccione una Rutina--</option>
           <?php
@@ -60,91 +59,43 @@ if ($varsesion == null || $varsesion = '') {
       
         <div>
           <br></br><a href='?' id='the-link'> Seleccionar</a><br></br>
-          <?php if(isset($_GET['1'])){
-            $idUrl = "1";
-            //echo $idUrl;
-          }
-           if(isset($_GET['2'])){
-            $idUrl = "2";
-            //echo $idUrl;
-           }
-            if(isset($_GET['3'])){
-            $idUrl = "3";
-            //echo $idUrl;
-          }
+          <?php 
+            if(isset($_GET['1'])){$idUrl="1";}
+            if(isset($_GET['2'])){$idUrl="2";}
+            if(isset($_GET['3'])){$idUrl="3";}
           ?>
+          <br></br><a href='?' id='historial'> Aplicar </a><br></br>
         </div>
       </div>
-
-    <div id="row2">
-    <h3 id="tRow2">EJERCICIOS</h3> 
-      <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
-        <tr class="success">
-          <th><h2>Dia°</h2></th>
-          <th><h2>Musculo</h2></th>
-          <th><h2>Nombre</h2></th>
-          <th><h2>Series</h2></th>
-          <th><h2>Repeticiones</h2></th>
-          <th><h2>Descanso</h2></th>
-        </tr>
-
-          <?php /* Falta vincular URL con el mapear rutinas para mostrar.....
-          aca hay que hacer una query, si en el get figura algun codigo que conozcamos, 
-          hay que buscar el codigo en la base y mostrar la info de los ejercicios vinculados a ese codigo(rutina)
-          $listaRutinas[] = mapearRutinas();
-          if(isset($_GET['codigo'])){
-            echo "info de ese codigo";
-          }*/?>
-
-          <?php
-          if(isset($idUrl)){
-
-          
-            $fila= mapearRutinas($idUrl);
-            foreach($fila as $rutina){?>
-            <tr><td><h2><?php echo $rutina->getDia(); ?></h2></td>
-                <td><h2><?php echo $rutina->getMusculo(); ?></h2></td>
-                <td><h2><?php echo $rutina->getNombre(); ?></h2></td>
-                <td><h2><?php echo $rutina->getSerie(); ?></h2></td>
-                <td><h2><?php echo $rutina->getRepeticiones(); ?></h2></td>
-                <td><h2><?php echo $rutina->getDescanso(); ?></h2></td></tr>
-            <?php }
-            }
-          ?>      
-        </tr>
-      </table>
-    </div>
-    </div>
-    <!--
-    <div id="contenido2">
-      <div id="row1">
-        <h3>Cantidad de calorias que quieres quemar</h3><br></br>
-          <select name="select Calorias" multiple>
-            <option value="" disable selected>--Seleccione una Calorias--</option>
-            <option value="100">100</option>
-            <option value="200">200</option>
-            <option value="300">300</option>
-            <option value="400">400</option>
-            <option value="500">500</option>
-          </select>
-        </div>
-        <div id="row2">
-        <h3>Lista de ejercicios de la de la rutina seleccionada</h3><br></br>
-        <table bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
+      <!-- Row 2 Ejercicios table -->
+      <div id="row2">
+      <h3 id="tRow2">EJERCICIOS</h3> 
+        <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
           <tr class="success">
-            <th><h2>N°</h2></th>
-            <th><h2>Alimentos</h2></th>
-            <th><h2>Calorias</h2></th>
-            <th><h2>Descripcion</h2></th>
+            <th><h2>Dia°</h2></th>
+            <th><h2>Musculo</h2></th>
+            <th><h2>Nombre</h2></th>
+            <th><h2>Series</h2></th>
+            <th><h2>Repeticiones</h2></th>
+            <th><h2>Descanso</h2></th>
           </tr>
-          <tr>
-            <td><h2>1</h2></td>
-            <td><h2>2</h2></td>
-            <td><h2>3</h2></td>
-            <td><h2>4</h2></td>
+        <!-- Show rutinas-->
+          <?php 
+            if(isset($idUrl)){
+              $fila= mapearRutinas($idUrl);
+              foreach($fila as $rutina){?>
+              <tr><td><h2><?php echo $rutina->getDia(); ?></h2></td>
+                  <td><h2><?php echo $rutina->getMusculo(); ?></h2></td>
+                  <td><h2><?php echo $rutina->getNombre(); ?></h2></td>
+                  <td><h2><?php echo $rutina->getSerie(); ?></h2></td>
+                  <td><h2><?php echo $rutina->getRepeticiones(); ?></h2></td>
+                  <td><h2><?php echo $rutina->getDescanso(); ?></h2></td></tr>
+              <?php }
+              }
+            ?>      
           </tr>
         </table>
       </div>
-    </div>-->
+    </div>
   </body>
 </html> 
