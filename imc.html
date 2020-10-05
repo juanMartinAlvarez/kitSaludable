@@ -24,7 +24,7 @@
                 imc= peso/(altura*altura);
                 resultadoFinal = (altura*altura*20.5-peso);
                 if(resultadoFinal < 0){
-                    resultadoFinal = Math.abs(resultadoFinal);
+                    resultadoFinal = (Math.abs(resultadoFinal)/2);
                 }
                 resultadoFinal = resultadoFinal.toFixed(2);
                 // muestra resultado con 2 decimales
