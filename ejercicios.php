@@ -64,7 +64,7 @@ if ($varsesion == null || $varsesion = '') {
             if(isset($_GET['2'])){$idUrl="2";}
             if(isset($_GET['3'])){$idUrl="3";}
           ?>
-          <br></br><a href='?' id='historial'> Aplicar </a><br></br>
+          <br></br><buton class="btn btn-primary" id='historial'> Guardar Rutina </buton><br></br>
         </div>
       </div>
       <!-- Row 2 Ejercicios table -->
@@ -97,5 +97,6 @@ if ($varsesion == null || $varsesion = '') {
         </table>
       </div>
     </div>
+  <script src="js/funciones/historial.js"></script>
   </body>
 </html> 
