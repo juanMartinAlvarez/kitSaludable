@@ -30,20 +30,25 @@
                       <table class="table table-dark">
                         <thead>
                           <tr>
-                            <th scope="col">Fecha</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Altura</th>                           
                             <th scope="col">Rutina</th>
                             <th scope="col">Dieta</th>
+                            <th scope="col">Fecha</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <?php 
                             $fila = mostrarHistorial();
-                              
                                 foreach ($fila as $persona) { ?>
+                                  <td><?php echo $persona->getedad() ?></td>
+                                  <td><?php echo $persona->getpeso() ?></td>
+                                  <td><?php echo $persona->getaltura() ?></td>
+                                  <td><?php echo $persona->getRutinas() ?></td>
+                                  <td><?php echo $persona->getDietas() ?></td>
                                   <td><?php echo $persona->getFecha() ?></td>
-                                  <td><?php echo $persona->getid_ejerciciosRutinas() ?></td>
-                                  <td><?php echo $persona->getid_alimentosDietas() ?></td>
                             <?php } ?>
                           </tr>
                         </tbody>
