@@ -2,12 +2,14 @@
   class Persona{
     
     private $id;
+    private $nombre;
+    private $apellido;
     private $peso;
     private $altura;
     private $edad;
     private $fecha;
-    private $nombre;
-    private $apellido;
+    private $id_alimentosDietas;
+    private $id_ejerciciosRutinas;
 
     public function getid(){return $this->id;}
     public function setid($id){$this->id = $id;}
@@ -29,5 +31,13 @@
     
     public function getfecha(){return $this->fecha;}
     public function setfecha($fecha){$this->fecha = $fecha;}
+    
+    public function getid_alimentosDietas(){return $this->id_alimentosDietas;}
+    public function setid_alimentosDietas($id_alimentosDietas){
+      $this->id_alimentosDietas = $id_alimentosDietas;}
+    
+    public function getid_ejerciciosRutinas(){return $this->id_ejerciciosRutinas;}
+    public function setid_ejerciciosRutinas($id_ejerciciosRutinas){
+      $this->id_ejerciciosRutinas = $id_ejerciciosRutinas;}
   }
 ?>

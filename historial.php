@@ -6,6 +6,11 @@
         <meta http-equiv="x-ua-compatible" content="i3-edge">
         <link rel="stylesheet" href="estilos/estilos.css">
         <link href="css/bootstrap.css" media="all" rel="stylesheet">
+      	<?php
+          session_start();
+          include_once("cruddatos.php");
+          require_once('dbconnection.php');
+        ?>
     </head>
 
     <body>
@@ -20,15 +25,33 @@
                         <img alt="" src="img/usr.png"/><!-- user image-->
                     </div>
 
-                    <!-- ** Informacion** -->
-                    <div class="row container justify-content-around">
+                      <!-- Mostrar datos en pantalla-->  
+                    <div class="bg-dark col-sm-12">
+                      <table class="table table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Rutina</th>
+                            <th scope="col">Dieta</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <?php 
+                            $fila = mostrarDatosPersona();
+                              if (isset($_GET['mostrarDatosPersona'])){ 
+                                foreach ($fila as $persona) { ?>
+                                  <td><?php echo $persona->getFecha() ?></td>
+                                  <td><?php echo $persona->getid_ejerciciosRutinas ?></td>
+                                  <td><?php echo $persona->getid_ejerciciosRutinas ?></td>
+                                <?php }} ?>
+                          </tr>
+                    </tbody>
 
-                        <row class=" col-12"><h1 class="titulo-principal">Estamos trabajando para usted</h1></row>
-                        <row class=" col-7">
-
-                        </row>
-
-                       
+                        </table>
+                    </div> 
+                    
+                         
         <style>
         body{
             background: url(img/alimentos-sanos.jpg) no-repeat center center fixed;

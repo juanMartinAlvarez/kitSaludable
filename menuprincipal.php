@@ -49,7 +49,7 @@
                   'imc.html'" >IMC</button>
                 </li>
                 <li><button class="btn btn-primary" onclick="location.href=
-                  'historial.html'" >Historial</button>
+                  'historial.php'" >Historial</button>
                 </li>
                 <li><button class="btn btn-primary" onclick="location.href=
                   'datos.php'" >Datos</button>
