@@ -33,7 +33,11 @@ function mostrarDatosPersona(){
 }
 
 function mostrarHistorial(){
-  $sql = 'SELECT * FROM personas WHERE id_users=\''.$_SESSION['id'].'\' ORDER BY id DESC LIMIT 1';
+  $sql= 'SELECT p.edad, p.peso, p.altura,d.nombre as dieta,r.nombre as rutina,p.fecha FROM personas p, dietas d, rutinas r 
+        where p.id_alimentosDietas = d.id
+        and p.id_ejerciciosRutinas = r.id
+        and id_users=\''.$_SESSION['id'].'\'';
+  // $sql = 'SELECT * FROM personas WHERE id_users=\''.$_SESSION['id'].'\' ORDER BY id DESC';
   $con = conectar();// dbconnectionsimple.php funtion
   if($con -> query($sql)){ // check consulta ok
     $datosActualizados = [];
@@ -41,9 +45,12 @@ function mostrarHistorial(){
     if($result->num_rows > 0){
       while($row = $result->fetch_assoc()) {
         $myPersona = new Persona();
+        $myPersona->setEdad($row['edad']);
+        $myPersona->setPeso($row['peso']);
+        $myPersona->setAltura($row['altura']);
+        $myPersona->setRutinas($row['rutina']);
+        $myPersona->setDietas($row['dieta']);
         $myPersona->setFecha($row['fecha']);
-        $myPersona->setid_ejerciciosRutinas($row['id_ejerciciosRutinas']);
-        $myPersona->setid_alimentosDietas($row['id_alimentosDietas']);
         $datosActualizados[]=$myPersona;}
     }else{
 		  echo "Ingresar datos...";
