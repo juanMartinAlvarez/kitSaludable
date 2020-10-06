@@ -6,7 +6,7 @@ function mapearDietas($idUrl){
 
   
   $sql = 'select a.id, a.nombre , a.calorias, d.id, d.nombre as dieta, d.calorias as DCalorias, x.id, x.id_dietas, x.id_alimentos,x.tipo 
-  from alimentos a, dietas d, alimentosdietas x
+  from alimentos a, dietas d, alimentosDietas x
   where x.id_alimentos = a.id
   and x.id_dietas = d.id
   and x.id_dietas = '.$idUrl.'';
