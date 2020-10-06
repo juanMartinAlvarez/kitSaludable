@@ -4,14 +4,14 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "-03:00";
---
+-- 
 -- Database
---
+-- 
 CREATE Database IF NOT EXISTS KitSaludable;
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `users`
---
+-- 
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
@@ -22,32 +22,32 @@ CREATE TABLE IF NOT EXISTS `users` (
   `posting_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
+-- 
 -- Dumping data for table `users`
---
+-- 
 
 INSERT INTO `users` (`id`, `fname`, `lname`, `email`, `password`, `posting_date`) VALUES
 (1, 'Martin', 'Alvarez', 'martin@alvarez.com', '2020', NULL),
 (2, 'Fernando', 'Lamas', 'fernando@lamas.com', '2020', NULL),
 (3, 'Lucas', 'Caruso', 'lucas@caruso.com', '2020', NULL);
 
---
+-- 
 -- Indexes for table `users`
---
+-- 
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
+-- 
 -- AUTO_INCREMENT for table `users`
---
+-- 
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `personas`
---
+-- 
 CREATE TABLE IF NOT EXISTS `personas` (
     `id` int(11) NOT NULL,
     `edad` int NOT NULL,
@@ -58,50 +58,50 @@ CREATE TABLE IF NOT EXISTS `personas` (
     `id_users`int(11) NOT NULL,
     `fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `personas`
---
+-- 
 ALTER TABLE `personas`
   ADD PRIMARY KEY (`id`);
---
+-- 
 -- AUTO_INCREMENT for table `personas`
---
+-- 
 ALTER TABLE `personas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `rutinas`
---
+-- 
 CREATE TABLE IF NOT EXISTS `rutinas`(
     `id` int(11) NOT NULL,
     `nombre` varchar(255),
     `intensidad` varchar (255),
     `url` varchar (255)    
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `rutinas`
---
+-- 
 ALTER TABLE `rutinas`
     ADD PRIMARY KEY(`id`);
---
+-- 
 -- AUTO_INCREMENT for table `rutinas`
---
+-- 
 ALTER TABLE `rutinas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
---
+-- 
 -- Dumping data for table `rutinas`
---
+-- 
 INSERT INTO `rutinas`(`id`, `nombre`,`intensidad`,`url`) VALUES (1,'Full body - Easy','leve','aerobico'),
 (2,'Weider - Medium','Media','weider1'),
 (3,'Weider - Hard','Alta','weider2');
 
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `listadejercicios`
---
+-- 
 CREATE TABLE IF NOT EXISTS `listadejercicios`(
     `id` int(11) NOT NULL,
     `id_rutinas` int(11) NOT NULL,
@@ -111,20 +111,20 @@ CREATE TABLE IF NOT EXISTS `listadejercicios`(
     `repeticiones` varchar (255),
     `descanso` varchar (255)    
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `listadejercicios`
---
+-- 
 ALTER TABLE `listadejercicios`
     ADD PRIMARY KEY(`id`);
---
+-- 
 -- AUTO_INCREMENT for table `listadejercicios`
---
+-- 
 ALTER TABLE `listadejercicios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 -- --------------------------------------------------------
---
+-- 
 -- Dumping data for table `listadejercicios`
---
+-- 
 INSERT INTO `listadejercicios`(`id`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`,`series`,`repeticiones`,`descanso`) VALUES (1,'2','1','1','4','10-10-10-8','60s'),
 (2,'2','1','2','4','10-10-10-8','60s'),
 (3,'2','1','3','4','10-10-10-8','60s'),
@@ -199,28 +199,28 @@ INSERT INTO `listadejercicios`(`id`, `id_rutinas`,`numero_de_dia`,`id_ejercicio`
 (72,'1','3','18','3','8','30s');
 
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `ejercicio`
---
+-- 
 CREATE TABLE IF NOT EXISTS `ejercicio`(
     `id` int(11) NOT NULL,
     `nombre` varchar(255),
     `musculo` varchar(255)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `ejercicio`
---
+-- 
 ALTER TABLE `ejercicio`
     ADD PRIMARY KEY(`id`);
---
+-- 
 -- AUTO_INCREMENT for table `ejercicios`
---
+-- 
 ALTER TABLE `ejercicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   -- --------------------------------------------------------
---
+-- 
 -- Dumping data for table `ejercicio`
---
+-- 
 INSERT INTO `ejercicio`(`id`, `nombre`,`musculo`) VALUES (1,'Dominadas','Espalda'),
 (2,'Jalones con triangulo','Espalda'),
 (3,'Remo con barra','Espalda'),
@@ -254,29 +254,29 @@ INSERT INTO `ejercicio`(`id`, `nombre`,`musculo`) VALUES (1,'Dominadas','Espalda
 
 
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `alimentos`
---
+-- 
 CREATE TABLE IF NOT EXISTS `alimentos`(
     `id` int(11) NOT NULL,
     `nombre` varchar(255) NOT NULL, 
     `calorias` int(20) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `alimentos`
---
+-- 
 ALTER TABLE `alimentos`
     ADD PRIMARY KEY(`id`);
---
+-- 
 -- AUTO_INCREMENT for table `alimentos`
---
+-- 
 ALTER TABLE `alimentos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- --------------------------------------------------------
---
+-- 
 -- Dumping data for table `alimentos`
---
+-- 
 INSERT INTO `alimentos`(`id`, `nombre`, `calorias` ) VALUES (1,'Yogurt con cereales',62),
 (2,'Galletitas integrales',200),
 (3,'Infucion',4),
@@ -301,30 +301,30 @@ INSERT INTO `alimentos`(`id`, `nombre`, `calorias` ) VALUES (1,'Yogurt con cerea
 (23,'Jamon',145);
 
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `alimentosDietas`
---
+-- 
 CREATE TABLE IF NOT EXISTS `alimentosDietas`(
     `id` int(11) NOT NULL,
     `id_dietas` int(11) NOT NULL,
     `id_alimentos` int(11) NOT NULL,
     `tipo` varchar(255) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `alimentosDietas`
---
+-- 
 ALTER TABLE `alimentosDietas`
     ADD PRIMARY KEY(`id`);
---
+-- 
 -- AUTO_INCREMENT for table `alimentosDietas`
---
+-- 
 ALTER TABLE `alimentosDietas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   
 -- --------------------------------------------------------
---
+-- 
 -- Dumping data for table `alimentosDietas`
---
+-- 
 INSERT INTO `alimentosDietas` (`id`, `id_dietas`, `id_alimentos`,`tipo`) VALUES (1,1,1,'Desayuno'),
 (2,1,1,'Merienda'),
 (3,1,2,'Desayuno'),
@@ -407,29 +407,29 @@ INSERT INTO `alimentosDietas` (`id`, `id_dietas`, `id_alimentos`,`tipo`) VALUES 
 (79,3,12,'Cena'),
 (80,3,18,'Cena');
 -- --------------------------------------------------------
---
+-- 
 -- Table structure for table `dietas`
---
+-- 
 CREATE TABLE IF NOT EXISTS `dietas`(
     `id` int(11) NOT NULL,
     `nombre` varchar(255) NOT NULL, 
     `calorias` varchar(255) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
---
+-- 
 -- Indexes for table `dietas`
---
+-- 
 ALTER TABLE `dietas`
   ADD PRIMARY KEY(`id`);
---
+-- 
 -- AUTO_INCREMENT for table `dietas`
---
+-- 
 ALTER TABLE `dietas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   
 -- --------------------------------------------------------
---
+-- 
 -- Dumping data for table `dietas`
---
+-- 
 INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',2000),
 (2,'Carnes y lacteos',2000),
 (3,'Dieta de inicio',2400),
@@ -437,9 +437,9 @@ INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',200
 (5,'Hipercalorica1',2800),
 (6,'Hipercalorica2',2800);
 
---
+-- 
 -- ADD FKs
---
+-- 
 ALTER TABLE `alimentosdietas` ADD INDEX(`id_dietas`);
 ALTER TABLE `alimentosdietas` ADD INDEX(`id_alimentos`);
 alter table `alimentosdietas` ADD FOREIGN KEY(id_dietas) REFERENCES dietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION; 
@@ -453,6 +453,6 @@ alter table `listadejercicios` ADD FOREIGN KEY(id_rutinas) REFERENCES rutinas(id
 ALTER TABLE `personas` ADD INDEX(`id_alimentosDietas`);
 ALTER TABLE `personas` ADD INDEX(`id_ejerciciosRutinas`);
 ALTER TABLE `personas` ADD INDEX(`id_users`);
-alter table `personas` ADD FOREIGN KEY(id_alimentosDietas) REFERENCES alimentosdietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
-alter table `personas` ADD FOREIGN KEY(id_ejerciciosRutinas) REFERENCES listadejercicios(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+alter table `personas` ADD FOREIGN KEY(id_alimentosDietas) REFERENCES dietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+alter table `personas` ADD FOREIGN KEY(id_ejerciciosRutinas) REFERENCES ejercicio(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
 alter table `personas` ADD FOREIGN KEY(id_users) REFERENCES users(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
