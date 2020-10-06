@@ -436,3 +436,23 @@ INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',200
 (4,'Disociada combinada',2400),
 (5,'Hipercalorica1',2800),
 (6,'Hipercalorica2',2800);
+
+--
+--ADD FKs
+--
+ALTER TABLE `alimentosdietas` ADD INDEX(`id_dietas`);
+ALTER TABLE `alimentosdietas` ADD INDEX(`id_alimentos`);
+alter table alimentosdietas ADD FOREIGN KEY(id_dietas) REFERENCES dietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION 
+alter table alimentosdietas ADD FOREIGN KEY(id_alimentos) REFERENCES alimentos(id) ON DELETE NO ACTION ON UPDATE NO ACTION 
+
+ALTER TABLE `listadejercicios` ADD INDEX(`id_ejercicio`);
+ALTER TABLE `listadejercicios` ADD INDEX(`id_rutinas`);
+alter table listadejercicios ADD FOREIGN KEY(id_ejercicio) REFERENCES ejercicio(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+alter table listadejercicios ADD FOREIGN KEY(id_rutinas) REFERENCES rutinas(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `personas` ADD INDEX(`id_alimentosDietas`);
+ALTER TABLE `personas` ADD INDEX(`id_ejerciciosRutinas`);
+ALTER TABLE `personas` ADD INDEX(`id_users`);
+alter table personas ADD FOREIGN KEY(id_alimentosDietas) REFERENCES alimentosdietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+alter table personas ADD FOREIGN KEY(id_ejerciciosRutinas) REFERENCES listadejercicios(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+alter table personas ADD FOREIGN KEY(id_users) REFERENCES users(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
