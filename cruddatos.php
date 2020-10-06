@@ -32,6 +32,28 @@ function mostrarDatosPersona(){
   }
 }
 
+function mostrarHistorial(){
+  $sql = 'SELECT * FROM personas WHERE id_users=\''.$_SESSION['id'].'\' ORDER BY id DESC LIMIT 1';
+  $con = conectar();// dbconnectionsimple.php funtion
+  if($con -> query($sql)){ // check consulta ok
+    $datosActualizados = [];
+    $result = $con->query($sql);  
+    if($result->num_rows > 0){
+      while($row = $result->fetch_assoc()) {
+        $myPersona = new Persona();
+        $myPersona->setFecha($row['fecha']);
+        $myPersona->setid_ejerciciosRutinas($row['id_ejerciciosRutinas']);
+        $myPersona->setid_alimentosDietas($row['id_alimentosDietas']);
+        $datosActualizados[]=$myPersona;}
+    }else{
+		  echo "Ingresar datos...";
+    }
+    return $datosActualizados;
+  }else{
+    echo " DB Error No se pudo realizar la consulta: mostrarDatosPersona()";
+  }
+}
+
 function renovarDatos($peso,$altura,$edad,$sessionid){
   $sql = "insert into personas(peso,altura,edad,id_users) values($peso,$altura,$edad,$sessionid)";
   $con = conectar();

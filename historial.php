@@ -39,19 +39,19 @@
                           <tr>
                             <?php 
                             $fila = mostrarDatosPersona();
-                              if (isset($_GET['mostrarDatosPersona'])){ 
+                              
                                 foreach ($fila as $persona) { ?>
                                   <td><?php echo $persona->getFecha() ?></td>
                                   <td><?php echo $persona->getid_ejerciciosRutinas ?></td>
-                                  <td><?php echo $persona->getid_ejerciciosRutinas ?></td>
-                                <?php }} ?>
+                                  <td><?php echo $persona->getid_alimentosDietas ?></td>
+                            <?php } ?>
                           </tr>
-                    </tbody>
-
-                        </table>
-                    </div> 
-                    
-                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+          </div>
         <style>
         body{
             background: url(img/alimentos-sanos.jpg) no-repeat center center fixed;
