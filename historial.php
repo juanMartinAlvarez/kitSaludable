@@ -38,12 +38,12 @@
                         <tbody>
                           <tr>
                             <?php 
-                            $fila = mostrarDatosPersona();
+                            $fila = mostrarHistorial();
                               
                                 foreach ($fila as $persona) { ?>
                                   <td><?php echo $persona->getFecha() ?></td>
-                                  <td><?php echo $persona->getid_ejerciciosRutinas ?></td>
-                                  <td><?php echo $persona->getid_alimentosDietas ?></td>
+                                  <td><?php echo $persona->getid_ejerciciosRutinas() ?></td>
+                                  <td><?php echo $persona->getid_alimentosDietas() ?></td>
                             <?php } ?>
                           </tr>
                         </tbody>
