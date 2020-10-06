@@ -49,8 +49,8 @@
                                   <td><?php echo $persona->getRutinas() ?></td>
                                   <td><?php echo $persona->getDietas() ?></td>
                                   <td><?php echo $persona->getFecha() ?></td>
+                                  </tr>
                             <?php } ?>
-                          </tr>
                         </tbody>
                       </table>
                     </div>
