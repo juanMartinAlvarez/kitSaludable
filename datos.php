@@ -1,9 +1,18 @@
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="estilos/estilos.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap -->
+  <script src="js/jquery/jquery-3.4.1.slim.min.js"></script>
+  <script src="js/jquery/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!--iconito-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.css" media="all" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  
 	<link rel="stylesheet" href="estilos/estilosDatos.css">
-	<link href="css/bootstrap.css" media="all" rel="stylesheet">
 	<title>Datos de Usuario</title>
 	<script>
 		function actualizarDatos() {
@@ -73,17 +82,8 @@
                 <td><?php echo $persona->getFecha() ?></td>
               <?php }} ?>
         </tr>
-  </tbody>
-
-      </table>
-  </div> 
-    
+      </tbody>
+    </table>
+  </div>    
 </div>
-
-	<!-- Bootstrap CSS -->
-	<script src="js/jquery/jquery-3.4.1.min.js"></script>
-	<script src="js/jquery/jquery-3.4.1.slim.min.js"></script>
-	<script src="js/popper/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-
 </body>

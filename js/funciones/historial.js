@@ -1,5 +1,10 @@
-$(document).ready(function(){
-  $('#historial').click(function(){
-     alert("A guardado la seleccion en el historial").text();
-  });
-});
+
+function appendHistory() {
+  var newUrl;
+  var url = window.location.href,
+    separator = (url.indexOf("?") === -1) ? "?" : "&",
+    newParam = separator + "appendHistory";
+  newUrl = url.replace(newParam, "");
+  newUrl += newParam;
+  window.location.href = newUrl;
+}

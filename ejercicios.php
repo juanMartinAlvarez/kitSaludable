@@ -11,27 +11,22 @@ if ($varsesion == null || $varsesion = '') {
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.css" media="all" rel="stylesheet">
-  <link rel="stylesheet" href="estilos/estiloEjercicios.css">
-  <script src="js/jquery/jquery-3.4.1.min.js"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap -->
   <script src="js/jquery/jquery-3.4.1.slim.min.js"></script>
-  <script src="js/popper/popper.min.js"></script>
+  <script src="js/jquery/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-
+  <!--iconito-->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.css" media="all" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  
+  <script src="js/funciones/historial.js"></script>
+  <link rel="stylesheet" href="estilos/estiloEjercicios.css">
   <title>Ejercicios</title>
-  <script>
-    function appendHistory() {
-      var url = window.location.href,
-        separator = (url.indexOf("?") === -1) ? "?" : "&",
-        newParam = separator + "appendHistory";
-      newUrl = url.replace(newParam, "");
-      newUrl += newParam;
-      window.location.href = newUrl;
-    }
-  </script>
   <script>
     $(function() {
       $('#select-ejercicios').on('change', function() {
@@ -62,31 +57,22 @@ if ($varsesion == null || $varsesion = '') {
           if ($result->num_rows > 0) {
             foreach ($result as $opciones) : ?>
               <option value="<?php echo $opciones['id']; ?>"><?php echo $opciones['nombre']; ?></option><?php
-                                                                                                      endforeach;
-                                                                                                    }
-                                                                                                  }
-                                                                                                        ?>
+            endforeach;
+          }
+        }
+        ?>
       </select>
 
       <div>
         <br></br><a href='?' id='the-link'> Seleccionar</a><br></br>
         <?php
-        if (isset($_GET['1'])) {
-          $idUrl = "1";
-        }
-        if (isset($_GET['2'])) {
-          $idUrl = "2";
-        }
-        if (isset($_GET['3'])) {
-          $idUrl = "3";
-        }
+        if (isset($_GET['1'])) {$idUrl = "1";}
+        if (isset($_GET['2'])) {$idUrl = "2";}
+        if (isset($_GET['3'])) {$idUrl = "3";}
         ?>
         <div>
           <?php if (isset($idUrl)) { ?><br></br>
             <buton class="btn btn-primary" id='historial' onclick="appendHistory()"> Guardar rutina
-
-
-
             </buton><br></br>
             <?php
             $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -129,24 +115,12 @@ if ($varsesion == null || $varsesion = '') {
       <h3 id="tRow2">EJERCICIOS</h3>
       <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
         <tr class="success">
-          <th>
-            <h2>Dia°</h2>
-          </th>
-          <th>
-            <h2>Musculo</h2>
-          </th>
-          <th>
-            <h2>Nombre</h2>
-          </th>
-          <th>
-            <h2>Series</h2>
-          </th>
-          <th>
-            <h2>Repeticiones</h2>
-          </th>
-          <th>
-            <h2>Descanso</h2>
-          </th>
+          <th><h2>Dia°</h2></th>
+          <th><h2>Musculo</h2></th>
+          <th><h2>Nombre</h2></th>
+          <th><h2>Series</h2></th>
+          <th><h2>Repeticiones</h2></th>
+          <th><h2>Descanso</h2></th>
         </tr>
         <!-- Show rutinas-->
         <?php

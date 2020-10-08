@@ -30,20 +30,10 @@ function mapearRutinas($idUrl){
     }else{
 		  echo "Ingresar datos...";
     }
-    //en lugar de una lista debería devolver el objeto myRutina ya que no se puede hacer una lista con la query
     return $rutinasActualizadas;
   }else{
     echo " DB Error No se pudo realizar la consulta: mapearRutinas()";
   }
-}
-function mostrardietassYRutinas(){
-/*
- select e.nombre, x.repeticiones
-  from dietass e, rutinas r, dietassRutinas x
-  where x.id_rutinas = r.id
-  and x.id_dietass = e.id
-  and r.id= 1 -> el id de la rutina que queres mostrar que lo obtenes de la rutina que esta consultando el chabon
-*/
 }
 
 ?>

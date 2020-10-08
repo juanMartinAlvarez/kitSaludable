@@ -3,8 +3,6 @@ include("dbconnectionsimple.php");
 include_once("claseAlimentos.php");
 
 function mapearDietas($idUrl){
-
-  
   $sql = 'select a.id, a.nombre , a.calorias, d.id, d.nombre as dieta, d.calorias as DCalorias, x.id, x.id_dietas, x.id_alimentos,x.tipo 
   from alimentos a, dietas d, alimentosDietas x
   where x.id_alimentos = a.id
@@ -27,20 +25,10 @@ function mapearDietas($idUrl){
     }else{
 		  echo "Ingresar datos...";
     }
-    //en lugar de una lista debería devolver el objeto myDieta ya que no se puede hacer una lista con la query
     return $alimentosActualizados;
   }else{
     echo " DB Error No se pudo realizar la consulta: mapearRutinas()";
   }
-}
-function mostrarDietasYAlimentos(){
-/*
- select e.nombre, x.repeticiones
-  from ejercicios e, rutinas r, ejerciciosRutinas x
-  where x.id_rutinas = r.id
-  and x.id_ejercicios = e.id
-  and r.id= 1 -> el id de la rutina que queres mostrar que lo obtenes de la rutina que esta consultando el chabon
-*/
 }
 
 ?>
