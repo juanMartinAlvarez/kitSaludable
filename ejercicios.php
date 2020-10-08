@@ -128,24 +128,12 @@ if ($varsesion == null || $varsesion = '') {
           $fila = mapearRutinas($idUrl);
           foreach ($fila as $rutina) { ?>
             <tr>
-              <td>
-                <h2><?php echo $rutina->getDia(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $rutina->getMusculo(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $rutina->getNombre(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $rutina->getSerie(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $rutina->getRepeticiones(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $rutina->getDescanso(); ?></h2>
-              </td>
+              <td><h2><?php echo $rutina->getDia(); ?></h2></td>
+              <td><h2><?php echo $rutina->getMusculo(); ?></h2></td>
+              <td><h2><?php echo $rutina->getNombre(); ?></h2></td>
+              <td><h2><?php echo $rutina->getSerie(); ?></h2></td>
+              <td><h2><?php echo $rutina->getRepeticiones(); ?></h2></td>
+              <td><h2><?php echo $rutina->getDescanso(); ?></h2></td>
             </tr>
         <?php }
         }
