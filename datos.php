@@ -1,5 +1,7 @@
 <?php
 require_once('autorized.php');
+include_once("cruddatos.php");
+require_once('dbconnection.php');
 require_once('header.php')
 ?>
   
@@ -11,11 +13,6 @@ require_once('header.php')
 			document.location.href = 'menuprincipal.php'
 		}
 	</script>
-	<?php
-	session_start();
-    include_once("cruddatos.php");
-    require_once('dbconnection.php');
-	?>
 </head>
 
 <body>

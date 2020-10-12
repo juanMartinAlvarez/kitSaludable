@@ -14,7 +14,7 @@
     </header>
 
     <div class="modal-dialog">
-      <div class="col-12 main-section">
+      <div class="main-section">
         <div class="modal-content bg-dark col-sm-12">
           <div class="col-sm-12 user-img text-center">
             <img alt="" src="img/usr.png"/><!-- user image-->
@@ -22,15 +22,15 @@
           <!-- ** Informacion** -->
           <div class="row justify-content-center">
             <row class=" col-12"><h1 class="titulo-principal">Calculo del peso ideal</h1></row>
-            <row class=" col-6">                        
-              <input class="form-control" type="number" 
-                 name="peso" id="peso" size="3" maxlength="4" placeholder="Peso">
-              <input class="form-control" type="number" 
-                 name="altura" id="altura" size="3" maxlength="3" laceholder="Altura">
-              <input class="btn btn-primary" type="button" value="Actualizar" 
-                 onclick="calcularIMC()">
+            <row class=" col-6 text-center">                        
+              <input class="form-control text-center" type="number" name="peso"
+                  id="peso" size="3" maxlength="3" placeholder="Peso">
+              <input class="form-control text-center" type="number" name="altura" 
+                  id="altura" size="3" maxlength="3" placeholder="Altura">
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Imc">
+              <input class="btn btn-primary" type="button" value="Actualizar" 
+                  onclick="calcularIMC()">
+              <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#Imc">
                 IMC</button>
             </row>
           </div>
@@ -40,14 +40,14 @@
     <!-- Modal -->
     <div class="modal fade text-center" id="Imc" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content" style= "height: 700px">
+        <div class="modal-content">
           <div class="modal-header bg-dark text-center">
-            <h3 class="modal-title text-center" id="ModalLabel">Resultados del calculo del IMC</h3>
+            <h3 class="modal-title text-white" id="ModalLabel">Indice de masa corporal</h3>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="calcularIMC()">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body " style= "height: 400px">
+          <div class="modal-body">
             <row >
               <div class="col-12 h-10" >
                 <p> IMC:
@@ -55,7 +55,7 @@
               </div>
               <div class="col-12 h-90">
                 <input class= "w-100 h-50 text-center" type="text" name="info" id="info"><br></br>
-                <img alt="" class= "flex-column " src="img/IMC.png"/><!--image-->
+                <img alt="" class= "img-responsive flex-column content-center" src="img/IMC.png"/><!--image-->
               </div>
             </row>
           </div>

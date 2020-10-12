@@ -1,4 +1,6 @@
 <?php
+require('crudrutinas.php');
+require_once('dbconnectionsimple.php');
 require_once('header.php');
 require_once('autorized.php');
 ?>
@@ -28,8 +30,6 @@ require_once('autorized.php');
       <select id="select-ejercicios" multiple>
         <option disable selected>--Seleccione una Rutina--</option>
         <?php
-        require('crudrutinas.php');
-        require_once('dbconnectionsimple.php');
         $sql = 'SELECT * FROM rutinas';
         $con = conectar(); // dbconnectionsimple.php funtion
         if ($con->query($sql)) { // check consulta ok
