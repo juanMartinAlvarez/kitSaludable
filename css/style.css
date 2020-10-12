@@ -32,9 +32,6 @@ body{
 	background:url("../images/bg1.jpg") no-repeat 0px 0px;
   background-attachment: fixed;
   background-size:cover;
-  -o-background-size:cover;
-  -moz-background-size:cover;
-  -webkit-background-size:cover;
   font-family: 'Source Sans Pro', sans-serif;
 }
 .main h1{

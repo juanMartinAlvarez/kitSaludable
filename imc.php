@@ -1,27 +1,8 @@
 <?php session_start();
   require_once('dbconnection.php');
-  require_once('includes/login.php');
-  require_once('includes/registro.php');
-  require_once('includes/olvido.php');
+  require('header.php');
 ?>
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap -->
-    <script src="js/jquery/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/jquery/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!--iconito-->
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.css" media="all" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilosImc.css">
-    <link rel="stylesheet" href="estilos/estilos.css">
-
     <script type="text/javascript" src="js/funciones/imc.js"></script>
     <title>Ingreso de Usuario</title>
   </head>
