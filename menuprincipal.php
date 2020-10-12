@@ -1,4 +1,5 @@
 <?php
+  require_once('autorized.php');
   require_once('header.php');
 ?>
     <title>Kit Saludable</title>

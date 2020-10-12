@@ -1,10 +1,5 @@
 <?php
-session_start();
-$varsesion = $_SESSION['login'];
-if ($varsesion == null || $varsesion = '') {
-  echo  'Usted no tiene autorizacion';
-  die();
-}
+//require_once('autorized.php');
 require_once('header.php')
 ?>
  

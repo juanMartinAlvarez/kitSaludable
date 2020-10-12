@@ -1,5 +1,6 @@
 <?php
   session_start();
+  require_once('autorized.php');
   include_once("cruddatos.php");
   require_once('dbconnection.php');
   require_once('header.php')

@@ -1,4 +1,5 @@
 <?php session_start();
+  require_once('autorized.php');
   require_once('dbconnection.php');
   require('header.php');
 ?>
