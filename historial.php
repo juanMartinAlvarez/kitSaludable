@@ -1,9 +1,9 @@
-<?php
-  session_start();
-  require_once('autorized.php');
+<?php 
+  //require_once('autorized.php');
   include_once("cruddatos.php");
   require_once('dbconnection.php');
-  require_once('header.php')
+  require_once('header.php');
+  session_start();
 ?>
   <link rel="stylesheet" href="estilos/estilosHistorial.css">
   </head>
@@ -36,7 +36,9 @@
               <tbody>
                 <tr>
                   <?php 
-                  $fila = mostrarHistorial();
+                  $id = $_SESSION['id'];
+                  echo $id;
+                  $fila = mostrarHistorial($id);
                   foreach ($fila as $persona) { ?>
                     <td><?php echo $persona->getedad() ?></td>
                     <td><?php echo $persona->getpeso() ?></td>
