@@ -15,9 +15,9 @@
           <li><button class="btn btn-primary" onclick="location.href=
             'imc.php'">IMC</button></li>
           <li><button class="btn btn-primary" onclick="location.href=
-            'historial.php'" >Historial</button></li>
-          <li><button class="btn btn-primary" onclick="location.href=
             'datos.php'" >Datos</button></li>
+          <li><button class="btn btn-primary" onclick="location.href=
+            'historial.php'" >Historial</button></li>
           <li><button class="btn btn-primary" onclick="location.href=
             'cerrarsesion.php'">Cerrar sesion</button></li>
         </ul>
