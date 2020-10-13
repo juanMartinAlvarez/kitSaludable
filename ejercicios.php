@@ -54,7 +54,8 @@ require_once('autorized.php');
           <?php if (isset($idUrl)) { ?><br></br>
             <buton class="btn btn-primary" id='historial' onclick="appendHistory()"> Guardar rutina
             </buton><br></br>
-            <?php
+            <?php session_start();
+            
             $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
             if (strpos($url, '&appendHistory')) {

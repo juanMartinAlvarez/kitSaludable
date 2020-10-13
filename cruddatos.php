@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include("dbconnectionsimple.php");
 include_once("persona.php");
 
@@ -23,12 +23,12 @@ function mostrarDatosPersona(){
         $myPersona->setFecha($row['fecha']);
         $datosActualizados[]=$myPersona;}
     }else{
-		  echo "Ingresar datos...";
+		  echo "<br><p class='text-white text-center'>   Ingresar datos...</p>";
     }
     //en lugar de una lista debería devolver el objeto mypersona ya que no se puede hacer una lista con la query
     return $datosActualizados;
   }else{
-    echo " DB Error No se pudo realizar la consulta: mostrarDatosPersona()";
+    echo "<p class='text-white text-center'> DB Error No se pudo realizar la consulta: mostrarDatosPersona()</p>";
   }
 }
 
@@ -53,11 +53,11 @@ function mostrarHistorial(){
         $myPersona->setFecha($row['fecha']);
         $datosActualizados[]=$myPersona;}
     }else{
-		  echo "Ingresar datos...";
+		  echo "<p class='text-white text-center'>   Ingresar datos...</p>";
     }
     return $datosActualizados;
   }else{
-    echo " DB Error No se pudo realizar la consulta: mostrarDatosPersona()";
+    echo "<p class='text-white text-center'> DB Error No se pudo realizar la consulta: mostrarDatosPersona()</p>";
   }
 }
 

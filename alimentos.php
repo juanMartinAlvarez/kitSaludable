@@ -56,9 +56,8 @@ require_once('header.php')
         <?php if (isset($idUrl)) { ?><br></br>
           <buton class="btn btn-primary" id='historial' 
                  onclick="appendHistory()"> Guardar dieta</buton><br></br>
-          <?php
+          <?php session_start();
           $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-          
           if (strpos($url, '&appendHistory')) {
             $sqlPersonaExiste = 'select * from personas WHERE id_users=' . $_SESSION['id'] . '';
             if ($con->query($sqlPersonaExiste)) {
