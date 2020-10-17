@@ -3,9 +3,7 @@ require('crudrutinas.php');
 require_once('dbconnectionsimple.php');
 require_once('header.php');
 require_once('autorized.php');
-?>
-  
-  
+?> 
   <script src="js/funciones/historial.js"></script>
   <link rel="stylesheet" href="estilos/estiloEjercicios.css">
   <title>Ejercicios</title>
@@ -63,7 +61,11 @@ require_once('autorized.php');
               if ($con->query($sqlPersonaExiste)) {
                 $result = $con->query($sqlPersonaExiste);
                 if (!$result->num_rows > 0) {
-                  echo "<script>alert('Debes ingresar tus datos antes de guardar una rutina!')</script>";
+                  echo '<script type="text/javascript">'; 
+                  echo 'alert("Debes ingresar tus datos antes de guardar una rutina!");'; 
+                  echo 'window.location.href = "datos.php";';
+                  echo '</script>';
+                  
                 } else {
                   $sqlHistorial = 'update personas SET id_ejerciciosRutinas =' . $idUrl . '
                 WHERE id_users=' . $_SESSION['id'] . ' ORDER BY id DESC LIMIT 1';

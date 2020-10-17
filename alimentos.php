@@ -63,7 +63,10 @@ require_once('header.php')
             if ($con->query($sqlPersonaExiste)) {
               $result = $con->query($sqlPersonaExiste);
               if (!$result->num_rows > 0) {
-                echo "<script>alert('Debes ingresar tus datos antes de guardar una dieta!')</script>";
+                  echo '<script type="text/javascript">'; 
+                  echo 'alert("Debes ingresar tus datos antes de guardar una dieta!");'; 
+                  echo 'window.location.href = "datos.php";';
+                  echo '</script>';
               } else {
                 $sqlHistorial = 'update personas SET id_alimentosDietas =' . $idUrl . '
                 WHERE id_users=' . $_SESSION['id'] . ' ORDER BY id DESC LIMIT 1';
