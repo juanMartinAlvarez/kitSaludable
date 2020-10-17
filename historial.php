@@ -37,7 +37,6 @@
                 <tr>
                   <?php 
                   $id = $_SESSION['id'];
-                  echo $id;
                   $fila = mostrarHistorial($id);
                   foreach ($fila as $persona) { ?>
                     <td><?php echo $persona->getedad() ?></td>
