@@ -48,8 +48,12 @@ function mostrarHistorial($id){
         $myPersona->setEdad($row['edad']);
         $myPersona->setPeso($row['peso']);
         $myPersona->setAltura($row['altura']);
-        $myPersona->setRutinas($row['rutina']);
-        $myPersona->setDietas($row['dieta']);
+        if($row['rutina']!=NULL){
+          $myPersona->setRutinas($row['rutina']);
+        }
+        if($row['dieta']!=NULL){
+          $myPersona->setDietas($row['dieta']);
+        }
         $myPersona->setFecha($row['fecha']);
         $datosActualizados[]=$myPersona;}
     }else{
