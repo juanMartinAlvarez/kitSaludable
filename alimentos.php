@@ -47,9 +47,6 @@ require_once('header.php')
         if (isset($_GET['1'])) {$idUrl = "1";}
         if (isset($_GET['2'])) {$idUrl = "2";}
         if (isset($_GET['3'])) {$idUrl = "3";}
-        if (isset($_GET['4'])) {$idUrl = "4";}
-        if (isset($_GET['5'])) {$idUrl = "5";}
-        if (isset($_GET['6'])) {$idUrl = "6";}
         ?>
       </div>
       <div>
@@ -70,7 +67,6 @@ require_once('header.php')
               } else {
                 $sqlHistorial = 'update personas SET id_alimentosDietas =' . $idUrl . '
                 WHERE id_users=' . $_SESSION['id'] . ' ORDER BY id DESC LIMIT 1';
-
                 $con = conectar();
                 if ($con->query($sqlHistorial)) { // check consulta ok
                   $result = $con->query($sqlHistorial);
