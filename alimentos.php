@@ -88,40 +88,26 @@ require_once('header.php')
         }
         ?>
       </div>
-
     </div>
     <!-- Row 2 Alimentos table -->
     <div id="row2">
       <h3 id="tRow2">LISTA DE ALIMENTOS</h3>
       <table id='tabla' bgcolor="2c3e50" class="table table-striped table-bordered table-hover">
         <tr class="success">
-          <th>
-            <h2>Nombre</h2>
-          </th>
-          <th>
-            <h2>Calorias</h2>
-          </th>
-          <th>
-            <h2>Tipo</h2>
-          </th>
+          <th><h2>Nombre</h2></th>
+          <th><h2>Calorias</h2></th>
+          <th><h2>Tipo</h2></th>
         </tr>
         <?php
         if (isset($idUrl)) {
           $fila = mapearDietas($idUrl);
           foreach ($fila as $alimento) { ?>
             <tr>
-              <td>
-                <h2><?php echo $alimento->getNombre(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $alimento->getCalorias(); ?></h2>
-              </td>
-              <td>
-                <h2><?php echo $alimento->getTipo(); ?></h2>
-              </td>
-          <?php }
-        }
-          ?>
+              <td><h2><?php echo $alimento->getNombre(); ?></h2></td>
+              <td><h2><?php echo $alimento->getCalorias(); ?></h2></td>
+              <td><h2><?php echo $alimento->getTipo(); ?></h2></td><?php
+          }
+        }?>
             </tr>
       </table>
     </div>
