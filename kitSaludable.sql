@@ -433,9 +433,6 @@ ALTER TABLE `dietas`
 INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',2000),
 (2,'Carnes y lacteos',2000),
 (3,'Dieta de inicio',2400),
-(4,'Disociada combinada',2400),
-(5,'Hipercalorica1',2800),
-(6,'Hipercalorica2',2800);
 
 -- 
 -- ADD FKs
