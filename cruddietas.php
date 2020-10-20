@@ -1,6 +1,7 @@
-<?php
+<?php 
 include("dbconnectionsimple.php");
 include_once("claseAlimentos.php");
+include_once("persona.php");
 
 function mapearDietas($idUrl){
   $sql = 'select a.id, a.nombre , a.calorias, d.id, d.nombre as dieta, d.calorias as DCalorias, x.id, x.id_dietas, x.id_alimentos,x.tipo 
@@ -31,4 +32,35 @@ function mapearDietas($idUrl){
   }
 }
 
+function dietaEsNull(){
+  $sql = "SELECT `id_alimentosDietas` FROM `personas` ORDER BY id DESC LIMIT 1 ";
+  $con= conectar();
+  $result= $con->query($sql);
+  if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()){
+     if($row['id_alimentosDietas'] ==NULL){
+       return(true);
+     }else{
+       return(false);
+     }
+    }
+  }
+}
+function dietaActual(){
+  $sql = 'SELECT d.nombre as dieta, p.fecha FROM personas p, dietas d 
+  where p.id_alimentosDietas = d.id and p.id_users=\''.$_SESSION['id'].'\' ORDER BY fecha DESC LIMIT 1';
+  $con= conectar();
+  $result = $con->query($sql);
+  if($result-> num_rows > 0){
+    while($row = $result->fetch_assoc()){
+      if(dietaEsNull()){
+       return ('Sin Seleccion');
+     }else{
+       return ($row['dieta']);
+     }
+    }
+  }else{
+    echo ('no se pudo hacer la consulta');
+  }
+}
 ?>
