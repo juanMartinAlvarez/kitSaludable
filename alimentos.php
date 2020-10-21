@@ -19,13 +19,13 @@ require_once('header.php')
   <header>
     <h1 onclick="location.href='menuprincipal.php'">KitSaludable</h1>
   </header>
-  <!-- Row 1 Select Dieta -->
   <div id="contenido1">
+    <!-- Row 1 Select Dieta -->
     <div id="row1">
       <h3 id="tRow1">DIETAS:</h3>
       <select id="select-dietas" multiple>
         <option disable selected>--Seleccione una Dieta--</option>
-      <?php
+        <?php
         require('cruddietas.php');
         require_once('dbconnectionsimple.php');
         $sqlDietas = 'SELECT * FROM dietas';
@@ -34,14 +34,12 @@ require_once('header.php')
           $result = $con->query($sqlDietas);
           if ($result->num_rows > 0) {
             foreach ($result as $opciones) : ?>
-      <option value="<?php echo $opciones['id']; ?>"><?php echo $opciones['nombre']; ?></option>
-      <?php
+              <option value="<?php echo $opciones['id']; ?>"><?php echo $opciones['nombre']; ?></option>
+            <?php
             endforeach; 
           }
-        }
-        ?>
-    </select>
-
+        }?>
+      </select> 
       <div>
         <br></br><a href='?' id='the-link'>Seleccionar</a><br></br>
         <?php
@@ -50,16 +48,18 @@ require_once('header.php')
         if (isset($_GET['3'])) {$idUrl = "3";}
         ?>
       </div>
+      <hr><!-- Dieta guardada>--> 
       <?php 
         require_once('cruddietas.php');
         echo 'La dieta guardada es: ';?>
       <div id="dietaActual"><?php 
         echo dietaActual();?>
       </div>
+      <hr><!-- Guardar dieta>--> 
       <div>
-        <?php 
-        if (isset($idUrl)) { ?><br></br>
-        <buton class="btn btn-primary" id='historial' 
+      <?php 
+        if (isset($idUrl)) { ?>
+          <buton class="btn btn-primary" id='historial' 
                  onclick="appendHistory()"> Guardar dieta</buton><br></br>
           <?php           
           $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
