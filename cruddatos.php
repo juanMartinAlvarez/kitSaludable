@@ -33,10 +33,12 @@ function mostrarDatosPersona(){
 }
 
 function mostrarHistorial($id){
-  $sql= 'SELECT p.edad, p.peso, p.altura,d.nombre as dieta,r.nombre as rutina,p.fecha FROM personas p, dietas d, rutinas r 
-        where p.id_alimentosDietas = d.id
-        and p.id_ejerciciosRutinas = r.id
-        and id_users=\''.$id.'\'';
+  $sql= 'SELECT p.id_users,p.edad, p.peso, p.altura,d.nombre as dieta,r.nombre as rutina, p.fecha 
+       FROM personas p
+       left JOIN dietas d ON p.id_alimentosDietas = d.id
+       left JOIN rutinas r ON p.id_ejerciciosRutinas = r.id
+       WHERE p.id_users=\''.$id.'\'
+       order by p.fecha';
   // $sql = 'SELECT * FROM personas WHERE id_users=\''.$_SESSION['id'].'\' ORDER BY id DESC';
   $con = conectar();// dbconnectionsimple.php funtion
   if($con -> query($sql)){ // check consulta ok
