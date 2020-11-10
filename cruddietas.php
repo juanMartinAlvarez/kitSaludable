@@ -60,7 +60,7 @@ function dietaActual(){
      }
     }
   }else{
-    echo ('no se pudo hacer la consulta');
+    echo ('No estas haciendo ninguna dieta');
   }
 }
 ?>
