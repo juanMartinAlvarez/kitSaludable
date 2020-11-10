@@ -437,10 +437,10 @@ INSERT INTO `dietas`(`id`, `nombre`, `calorias`) VALUES (1,'Dieta primavera',200
 -- 
 -- ADD FKs
 -- 
-ALTER TABLE `alimentosdietas` ADD INDEX(`id_dietas`);
-ALTER TABLE `alimentosdietas` ADD INDEX(`id_alimentos`);
-alter table `alimentosdietas` ADD FOREIGN KEY(id_dietas) REFERENCES dietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION; 
-alter table `alimentosdietas` ADD FOREIGN KEY(id_alimentos) REFERENCES alimentos(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `alimentosDietas` ADD INDEX(`id_dietas`);
+ALTER TABLE `alimentosDietas` ADD INDEX(`id_alimentos`);
+alter table `alimentosDietas` ADD FOREIGN KEY(id_dietas) REFERENCES dietas(id) ON DELETE NO ACTION ON UPDATE NO ACTION; 
+alter table `alimentosDietas` ADD FOREIGN KEY(id_alimentos) REFERENCES alimentos(id) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 ALTER TABLE `listadejercicios` ADD INDEX(`id_ejercicio`);
 ALTER TABLE `listadejercicios` ADD INDEX(`id_rutinas`);
